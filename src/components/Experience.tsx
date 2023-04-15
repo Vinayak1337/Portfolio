@@ -59,6 +59,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 		icon={
 			<div className='flex items-center justify-center w-full h-full'>
 				<Img
+					loading='lazy'
 					src={icon}
 					alt={company_name}
 					className='w-3/5 h-3/5 object-contain'

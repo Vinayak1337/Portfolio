@@ -1,19 +1,24 @@
 'use client';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { SectionWrapper } from './hoc';
 import { slideIn } from '@/utils/motion';
 import {
 	DetailedHTMLProps,
 	FC,
 	InputHTMLAttributes,
-	useEffect,
 	useRef,
 	useState
 } from 'react';
 import { motion } from 'framer-motion';
 import PulseLoader from 'react-spinners/PulseLoader';
-import EarthCanvas from './canvas/Earth';
 import useToast from '@/hooks/useToast';
+import dynamic from 'next/dynamic';
+import { ComponentLoader } from './Loader';
+
+const EarthCanvas = dynamic(() => import('./canvas/Earth'), {
+	ssr: false,
+	loading: ComponentLoader
+});
 
 const IDs = {
 	TEMPLATE_ID: 'template_23jfgox',

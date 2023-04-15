@@ -1,4 +1,5 @@
 import { useProgress, Html } from '@react-three/drei';
+import FadeLoader from 'react-spinners/FadeLoader';
 
 const Loader = () => {
 	const { progress } = useProgress();
@@ -18,5 +19,11 @@ const Loader = () => {
 		</Html>
 	);
 };
+
+export const ComponentLoader = () => (
+	<div className='w-full h-full flex items-center justify-center'>
+		<FadeLoader color='#fff' />
+	</div>
+);
 
 export default Loader;

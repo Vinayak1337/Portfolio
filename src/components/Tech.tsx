@@ -1,7 +1,13 @@
 'use client';
+import dynamic from 'next/dynamic';
 import { technologies } from '../constants';
-import BallCanvas from './canvas/Ball';
 import { SectionWrapper } from './hoc';
+import { ComponentLoader } from './Loader';
+
+const BallCanvas = dynamic(() => import('./canvas/Ball'), {
+	ssr: false,
+	loading: ComponentLoader
+});
 
 const Tech = () => (
 	<div className='flex flex-row flex-wrap justify-center gap-10'>

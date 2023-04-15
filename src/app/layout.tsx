@@ -15,9 +15,9 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<link rel='icon' type='image/svg+xml' href='/logo-violet.svg' />
-			<body className='relative bg-primary'>
-				{children}
-			</body>
+			<meta name='theme-color' content='#050816' />
+
+			<body className='relative bg-primary'>{children}</body>
 		</html>
 	);
 }

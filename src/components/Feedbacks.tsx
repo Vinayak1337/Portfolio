@@ -51,6 +51,7 @@ const FeedbackCard: FC<FeedbackCardProps> = ({
 				</div>
 
 				<Img
+					loading='lazy'
 					width={40}
 					height={40}
 					src={image}

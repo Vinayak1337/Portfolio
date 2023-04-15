@@ -69,6 +69,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 			<div className='flex flex-col'>
 				<div className='relative w-full h-[14.5rem]'>
 					<Img
+						loading='lazy'
 						src={image}
 						alt={name}
 						className='object-cover w-full h-full rounded-2xl'
@@ -79,6 +80,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							target='_blank'
 							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
 							<Img
+								loading='lazy'
 								src={github}
 								alt='github'
 								className='w-1/2 h-1/2 object-contain'
@@ -89,6 +91,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							target='_blank'
 							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
 							<Img
+								loading='lazy'
 								style={{
 									filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
 								}}

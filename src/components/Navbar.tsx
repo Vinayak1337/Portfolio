@@ -20,7 +20,12 @@ const Navbar = () => {
 						if (!window) return;
 						window.scrollTo(0, 0);
 					}}>
-					<Img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+					<Img
+						loading='lazy'
+						src={logo}
+						alt='logo'
+						className='w-9 h-9 object-contain'
+					/>
 					<p className='transition-all duration-300 flex items-center text-white text-lg font-bold cursor-pointer'>
 						Vinayak&nbsp;
 						<span className='transition-all duration-300 sm:block hidden'>
@@ -37,6 +42,7 @@ const Navbar = () => {
 
 				<div className='sm:hidden flex flex-1 justify-end items-center'>
 					<Img
+						loading='lazy'
 						src={toggle ? close : menu}
 						alt='menu'
 						className='w-7 h-7 object-contain cursor-pointer'

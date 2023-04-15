@@ -1,8 +1,15 @@
 'use client';
+import dynamic from 'next/dynamic';
+
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import HackedText, { HackedTextMethods } from './hackedText';
-import ComputersCanvas from './canvas/Computers';
+import { ComponentLoader } from './Loader';
+
+const ComputersCanvas = dynamic(() => import('./canvas/Computers'), {
+	ssr: false,
+	loading: ComponentLoader
+});
 
 const Hero = () => {
 	const hackedTextRef = useRef<HackedTextMethods>(null);
