@@ -104,6 +104,7 @@ const ComputersCanvas = () => {
 				position: [20, 3, 5],
 				fov: 25
 			}}
+			dpr={[1, 2]}
 			gl={{
 				preserveDrawingBuffer: true
 			}}>

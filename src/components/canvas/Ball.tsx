@@ -18,6 +18,7 @@ const BallCanvas: FC<BallCanvasProps> = ({ icon }) => (
 			preserveDrawingBuffer: true
 		}}>
 		<Preload all />
+
 		<Suspense fallback={<Loader />}>
 			<OrbitControls enableZoom={false} />
 			<Ball imgUrl={icon.src} />
@@ -45,6 +46,7 @@ const Ball: FC<BallProps> = ({ imgUrl }) => {
 				<Decal
 					position={[0, 0, 1]}
 					rotation={[2 * Math.PI, 0, 6.25]}
+					scale={1}
 					flatShading
 					map={decal}
 				/>
