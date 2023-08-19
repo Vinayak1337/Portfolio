@@ -18,6 +18,7 @@ import {
 	tripguide,
 	threejs
 } from '../assets';
+import { wonderHood } from './base64Images';
 
 export const navLinks = [
 	{
@@ -260,8 +261,7 @@ const projects: Project[] = [
 			}
 		],
 		site_link: 'https://wonderhood.in/',
-		image:
-			'https://github-production-user-asset-6210df.s3.amazonaws.com/34209962/261813739-2b8c36d3-5921-48cf-a4c1-e3f28159cdbf.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230819%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230819T181752Z&X-Amz-Expires=300&X-Amz-Signature=df001b53c5e051986f79faf1984995bfdb5aabae12a384b9883b21e282428411&X-Amz-SignedHeaders=host&actor_id=34209962&key_id=0&repo_id=563333397'
+		image: wonderHood
 	},
 	{
 		name: 'wonderLearn',
