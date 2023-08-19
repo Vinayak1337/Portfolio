@@ -6,24 +6,26 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import { experiences } from '../constants';
+import { openInNew } from '@/assets';
+import { experiences } from '@/constants';
 import { SectionWrapper } from './hoc';
-import { textVariant } from '../utils/motion';
+import { textVariant } from '@/utils/motion';
 import { FC } from 'react';
-import { StaticImageData } from 'next/image';
 import Img from 'next/image';
+import Link from 'next/link';
+import hexToFilter from '@/utils/HexToFilter';
 
 const Experience = () => (
 	<>
 		<motion.div variants={textVariant()}>
 			<p className='sectionSubText'>What I have done so far</p>
-			<h2 className='sectionHeadText'>Work Experience.</h2>
+			<h2 className='sectionHeadText'>Work Experience</h2>
 		</motion.div>
 		<div className='mt-20 flex flex-col'>
 			<VerticalTimeline>
 				{experiences.map((experience, index) => (
 					<ExperienceCard
-						key={index + experience.title}
+						key={index + experience.title + 'xp card'}
 						index={index}
 						{...experience}
 					/>
@@ -42,7 +44,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 	iconBg,
 	date,
 	points,
-	index
+	projectReference
 }) => (
 	<VerticalTimelineElement
 		contentStyle={{
@@ -53,6 +55,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 			borderRight: '7px solid  #232631'
 		}}
 		date={date}
+		dateClassName='whitespace-pre-line'
 		iconStyle={{
 			background: iconBg
 		}}
@@ -62,38 +65,138 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 					loading='lazy'
 					src={icon}
 					alt={company_name}
-					className='w-3/5 h-3/5 object-contain'
+					className='w-3/5 h-3/5 object-contain rounded-full'
+					blurDataURL={icon}
+					placeholder='blur'
+					width={40}
+					height={40}
 				/>
 			</div>
 		}>
-		<div>
-			<h3 className='text-white text-2xl font-bold'>{title}</h3>
-			<p
-				className='text-secondary text-base font-semibold'
-				style={{
-					margin: 0
-				}}>
-				{company_name}
-			</p>
-			<ul className='mt-5 list-disc ml-5 space-y-2'>
+		<div className='flex flex-col gap-5'>
+			<div>
+				<h3 className='text-white text-2xl font-bold'>{title}</h3>
+				<p
+					className='text-secondary text-base font-semibold'
+					style={{
+						margin: 0
+					}}>
+					{company_name}
+				</p>
+			</div>
+			<ul className='list-disc ml-5 space-y-2'>
 				{points.map((point, index) => (
 					<li
-						key={`xp-point-${index}`}
+						key={`xp-point-${index}-${title}`}
 						className='text-white-100 text-sm pl-1 tracking-wider'>
 						{point}
 					</li>
 				))}
 			</ul>
+
+			<a className='flex' href={projectReference}>
+				Projects{' '}
+				<Img
+					className='-rotate-90 object-contain'
+					width={24}
+					height={24}
+					src={openInNew}
+					alt='projects'
+					style={{
+						filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
+					}}
+				/>
+			</a>
+
+			{/* <details className='transition-all duration-500'>
+				<summary className='text-white-100 text-sm pl-1 tracking-wider'>
+					Projects
+				</summary>
+				<ul className='list-disc ml-5'>
+					{projects.map((project, index) => {
+						switch (project.type) {
+							case 'unitary':
+								return (
+									<WorkProjectUI
+										key={`project-${index}-${project.name}`}
+										{...project.project}
+									/>
+								);
+
+							default:
+								return (
+									<PackageProjectUI
+										key={`project-${index}-${project.name}`}
+										{...project}
+									/>
+								);
+						}
+					})}
+				</ul>
+			</details> */}
 		</div>
 	</VerticalTimelineElement>
 );
 
+// const WorkProjectUI: FC<WorkProject> = ({
+// 	name,
+// 	github: githubURL,
+// 	link: siteURL
+// }) => (
+// 	<li className='text-white-100 text-sm pl-1 tracking-wider items-center flex gap-2'>
+// 		<p>{name}</p>
+// 		{githubURL && (
+// 			<a
+// 				href={githubURL}
+// 				target='_blank'
+// 				className='rounded-full flex justify-center items-center cursor-pointer'>
+// 				<Img
+// 					src={github}
+// 					alt={`${name} github`}
+// 					className='object-contain'
+// 					width={24}
+// 					height={24}
+// 				/>
+// 			</a>
+// 		)}
+// 		{siteURL && (
+// 			<a
+// 				href={siteURL}
+// 				target='_blank'
+// 				className='rounded-full flex justify-center items-center cursor-pointer'>
+// 				<Img
+// 					className='-rotate-90 object-contain'
+// 					width={24}
+// 					height={24}
+// 					src={openInNew}
+// 					alt={name}
+// 					style={{
+// 						filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
+// 					}}
+// 				/>
+// 			</a>
+// 		)}
+// 	</li>
+// );
+
+// const PackageProjectUI: FC<PackageProject> = ({ name, packages }) => (
+// 	<li className='text-white-100 text-sm pl-1 tracking-wider'>
+// 		<p>{name}</p>
+// 		<ul className='ml-5'>
+// 			{packages.map((pack, index) => (
+// 				<WorkProjectUI key={`package-${index}-${pack.name}`} {...pack} />
+// 			))}
+// 		</ul>
+// 	</li>
+// );
+
 interface ExperienceCardProps {
 	title: string;
 	company_name: string;
-	icon: StaticImageData;
+	icon: string;
 	iconBg: string;
 	date: string;
 	points: string[];
 	index: number;
+	projectReference: string;
 }

@@ -8,19 +8,26 @@ import Img from 'next/image';
 
 const Feedbacks = () => {
 	return (
-		<div className='mt-12 bg-black-100 rounded-3xl'>
-			<div className='padding bg-tertiary rounded-2xl min-h-[300px]'>
-				<motion.div variants={textVariant()}>
-					<p className='sectionSubText'>What others say</p>
-					<h2 className='sectionHeadText'>Testimonials.</h2>
-				</motion.div>
+		(testimonials.length && (
+			<div className='mt-12 bg-black-100 rounded-3xl'>
+				<div className='padding bg-tertiary rounded-2xl min-h-[300px]'>
+					<motion.div variants={textVariant()}>
+						<p className='sectionSubText'>What others say</p>
+						<h2 className='sectionHeadText'>Testimonials</h2>
+					</motion.div>
+				</div>
+				<div className='paddingX -mt-20 pb-14 flex flex-wrap gap-7'>
+					{testimonials.map((testimonial, index) => (
+						<FeedbackCard
+							key={testimonial.name}
+							index={index}
+							{...testimonial}
+						/>
+					))}
+				</div>
 			</div>
-			<div className='paddingX -mt-20 pb-14 flex flex-wrap gap-7'>
-				{testimonials.map((testimonial, index) => (
-					<FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-				))}
-			</div>
-		</div>
+		)) ||
+		null
 	);
 };
 

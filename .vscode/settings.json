@@ -2,9 +2,17 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
+    "apiflash",
+    "carrent",
     "frameloop",
     "GLTF",
+    "jobit",
+    "licdn",
     "MERN",
-    "randomuser"
+    "Possibillion",
+    "randomuser",
+    "reactjs",
+    "threejs",
+    "tripguide"
   ]
 }

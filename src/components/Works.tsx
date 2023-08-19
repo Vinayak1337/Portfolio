@@ -2,18 +2,18 @@
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
 import { SectionWrapper } from './hoc';
-import { fadeIn, textVariant } from '../utils/motion';
-import { projects } from '../constants';
+import { fadeIn, textVariant } from '@/utils/motion';
+import { projects } from '@/constants';
 import { FC } from 'react';
-import { github, openInNew } from '../assets';
-import hexToFilter from '../HexToFilter';
-import Img, { StaticImageData } from 'next/image';
+import { github, openInNew } from '@/assets';
+import hexToFilter from '@/utils/HexToFilter';
+import Img from 'next/image';
 
 const Works = () => (
 	<>
 		<motion.div variants={textVariant()}>
 			<p className='sectionSubText'>My work</p>
-			<h2 className='sectionHeadText'>Projects.</h2>
+			<h2 className='sectionHeadText'>Projects</h2>
 		</motion.div>
 
 		<div className='w-full flex'>
@@ -28,19 +28,20 @@ const Works = () => (
 				in managing state with Redux, creating custom hooks, and handling
 				authentication. I have a track record of delivering high-quality
 				solutions by following industry best practices, and I&apos;m always
-				eager to learn and explore new technologies. Please explore my GitHub
-				and LinkedIn profiles to view some of the projects I&apos;ve worked on,
-				and feel free to reach out if you&apos;re interested in collaborating.
+				eager to learn and explore new technologies. Please explore my{' '}
+				<a href='https://github.com/Vinayak1337'>GitHub</a> and{' '}
+				<a href='https://www.linkedin.com/in/vinayak1337/'>LinkedIn</a> profiles
+				to view some of the projects I&apos;ve worked on, and feel free to reach
+				out if you&apos;re interested in collaborating.
 			</motion.p>
 		</div>
 
 		<div className='mt-20 flex flex-wrap gap-7 items-stretch'>
 			{projects.map((project, index) => (
 				<ProjectCard
-					site_link='https://www.google.com'
 					{...project}
 					index={index}
-					key={`project-${index}`}
+					key={`project-${index}-${project.name}`}
 				/>
 			))}
 		</div>
@@ -56,9 +57,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
 	name,
 	source_code_link,
 	tags,
-	site_link
+	site_link,
+	refId
 }) => (
 	<motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+		<span className='hash-span' id={refId}>
+			&nbsp;
+		</span>
 		<Tilt
 			options={{
 				max: 45,
@@ -70,36 +75,48 @@ const ProjectCard: FC<ProjectCardProps> = ({
 				<div className='relative w-full h-[14.5rem]'>
 					<Img
 						loading='lazy'
-						src={image}
+						src={
+							image ||
+							`https://api.apiflash.com/v1/urltoimage?access_key=6de4058c9d2143188cbf8f41974b547d&url=${
+								site_link || source_code_link
+							}&format=png&quality=100&response_type=image&scale_factor=2`
+						}
 						alt={name}
 						className='object-cover w-full h-full rounded-2xl'
+						width={220}
+						height={232}
 					/>
+
 					<div className='absolute inset-0 gap-2 flex justify-end m-3 card-img_hover'>
-						<a
-							href={source_code_link}
-							target='_blank'
-							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
-							<Img
-								loading='lazy'
-								src={github}
-								alt='github'
-								className='w-1/2 h-1/2 object-contain'
-							/>
-						</a>
-						<a
-							href={site_link}
-							target='_blank'
-							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
-							<Img
-								loading='lazy'
-								style={{
-									filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
-								}}
-								src={openInNew}
-								alt='open-in-new'
-								className={`w-1/2 h-1/2 -rotate-90 object-contain`}
-							/>
-						</a>
+						{source_code_link && (
+							<a
+								href={source_code_link}
+								target='_blank'
+								className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+								<Img
+									loading='lazy'
+									src={github}
+									alt='github'
+									className='w-1/2 h-1/2 object-contain'
+								/>
+							</a>
+						)}
+						{site_link && (
+							<a
+								href={site_link}
+								target='_blank'
+								className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+								<Img
+									loading='lazy'
+									style={{
+										filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
+									}}
+									src={openInNew}
+									alt='open-in-new'
+									className={`w-1/2 h-1/2 -rotate-90 object-contain`}
+								/>
+							</a>
+						)}
 					</div>
 				</div>
 
@@ -111,7 +128,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
 			<div className='mt-5 flex flex-wrap gap-2'>
 				{tags.map(({ name, color }, index) => (
-					<p key={`tag-${index}-${name}`} className={`text-sm ${color}`}>
+					<p key={`tag-${index}-${name}`} className={`text-sm text-[${color}]`}>
 						#{name}
 					</p>
 				))}
@@ -120,15 +137,6 @@ const ProjectCard: FC<ProjectCardProps> = ({
 	</motion.div>
 );
 
-interface ProjectCardProps {
+type ProjectCardProps = {
 	index: number;
-	name: string;
-	description: string;
-	tags: {
-		name: string;
-		color: string;
-	}[];
-	image: StaticImageData;
-	source_code_link: string;
-	site_link: string;
-}
+} & Project;

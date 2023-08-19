@@ -17,7 +17,7 @@ const StarsCanvas = () => (
 	</div>
 );
 
-const Stars = (props: any) => {
+const Stars = () => {
 	const ref = useRef<PointsType>(null);
 
 	const sphere = random.inSphere(new Float32Array(5000), {

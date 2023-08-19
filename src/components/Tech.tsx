@@ -1,6 +1,6 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { technologies } from '../constants';
+import { technologies } from '@/constants';
 import { SectionWrapper } from './hoc';
 import { ComponentLoader } from './Loader';
 
