@@ -106,7 +106,7 @@ const ComputersCanvas = () => {
 			}}
 			dpr={[1, 2]}
 			gl={{
-				preserveDrawingBuffer: true
+				preserveDrawingBuffer: true, alpha: true
 			}}>
 			<Preload all />
 

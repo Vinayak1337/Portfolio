@@ -2,15 +2,21 @@
 import { PointMaterial, Points, Preload } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as random from 'maath/random/dist/maath-random.cjs';
-import { Suspense, useRef } from 'react';
+import { Suspense, useMemo, useRef } from 'react';
 import type { Points as PointsType } from 'three';
+import Loader from '../Loader';
 
 const StarsCanvas = () => (
 	<div className='w-full h-auto absolute inset-0 -z-10'>
-		<Canvas camera={{ position: [0, 0, 1] }}>
+		<Canvas
+			gl={{
+				preserveDrawingBuffer: true,
+				alpha: true
+			}}
+			camera={{ position: [0, 0, 1] }}>
 			<Preload all />
 
-			<Suspense fallback={null}>
+			<Suspense fallback={<Loader />}>
 				<Stars />
 			</Suspense>
 		</Canvas>
@@ -20,9 +26,13 @@ const StarsCanvas = () => (
 const Stars = () => {
 	const ref = useRef<PointsType>(null);
 
-	const sphere = random.inSphere(new Float32Array(5000), {
-		radius: 1.2
-	}) as Float32Array;
+	const sphere = useMemo(
+		() =>
+			random.inSphere(new Float32Array(6000), {
+				radius: 1.2
+			}) as Float32Array,
+		[]
+	);
 
 	useFrame((_, delta) => {
 		if (!ref.current) return;

@@ -15,7 +15,7 @@ const BallCanvas: FC<BallCanvasProps> = ({ icon }) => (
 	<Canvas
 		frameloop='demand'
 		gl={{
-			preserveDrawingBuffer: true
+			preserveDrawingBuffer: true, alpha: true
 		}}>
 		<Preload all />
 
