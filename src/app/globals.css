@@ -223,15 +223,15 @@ body {
 }
 
 .ffmpeg-text-gradient {
-	background: linear-gradient(to top, #e82c0c, #ff4c2f);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background: linear-gradient(to top, #2A2A2A, #4CAF50); /* Dark to FFmpeg green */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .s3-text-gradient {
-	background: linear-gradient(to top, #569a31, #6bb43a);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+    background: linear-gradient(to top, #D83367, #FC575E); /* Dark red to light red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .javascript-text-gradient {

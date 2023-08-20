@@ -146,7 +146,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 					</div>
 				</div>
 
-				<div className='mt-5 flex flex-wrap gap-2'>
+				<div className='flex flex-wrap gap-2'>
 					{tags?.length &&
 						tags.map(({ name, color }, index) => (
 							<p key={`tag-${index}-${name}`} className={`text-sm text-bold ${color}`}>

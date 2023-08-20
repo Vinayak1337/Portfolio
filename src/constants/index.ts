@@ -277,7 +277,7 @@ const projects: Project[] = [
 	{
 		name: 'wonderHood',
 		description:
-			"A dynamic React website tailored for adaptability, catering to evolving marketing and SEO needs. Integrated with Shopify's GraphQL API, it offers a seamless user experience, bolstered by advanced features like lazy loading for optimal performance.",
+			"A landing page introducing parents to wonderLearn's offerings. It showcases online courses, providing insights into the educational journey awaiting their children.",
 		refId: 'wonderhood-projects',
 		tags: [
 			TAGS.ReactJS,
@@ -293,7 +293,7 @@ const projects: Project[] = [
 	{
 		name: 'wonderLearn',
 		description:
-			'An upgraded version of the wonderHood site with redesigned UI, rebuilt using Next.js to address performance bottlenecks & SEO. The site leverages ISR, SSG, and SSR for enhanced speed and responsiveness. It also features a custom API to streamline Shopify data, and a shift to TailwindCSS for faster page construction.',
+			'A landing page that serves as a hub for educational content, featuring blogs, school-focused resources, and a toy store for kids. Designed as a one-stop destination for both learning and play.',
 		tags: [
 			TAGS.NextJS,
 			TAGS.TailwindCSS,
@@ -307,7 +307,7 @@ const projects: Project[] = [
 	{
 		name: 'wonderLearn App',
 		description:
-			'A mobile learning app for children aged 2-6, offering engaging games and videos. While the web version serves educators, focusing on young learners. It received a UI redesign to enhance its child-friendly appeal.',
+			'A mobile app designed for kids aged 2-6, blending fun with education through games and videos. While the web caters to educators, the app delights young learners.',
 		site_link: 'https://wonderlearn.app.link/app',
 		tags: [
 			TAGS.ReactNative,
@@ -322,7 +322,7 @@ const projects: Project[] = [
 	{
 		name: 'MyLearning',
 		description:
-			'A specialized platform for educators, the MyLearning school dashboard is a React-based website that facilitates the management of student activities. Educators can generate detailed student reports, visualize data through charts, and gain insights to enhance the learning experience.',
+			'A platform for educators, MyLearning centralizes student management. It offers detailed reports and data visualization, enhancing the teaching process.',
 		tags: [
 			TAGS.ReactJS,
 			TAGS.StyledComponents,
@@ -335,7 +335,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'Dating App - Landing Page',
-		description: 'A ReactJS website for a dating app',
+		description:
+			'A captivating landing page designed for coffee shop owners and users. Coffee shops can register to kickstart their journey, while users are directed to app stores for downloading the dating app.',
 		refId: 'possibillion-projects',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.TypeScript],
 		site_link: 'https://dating-app-website.netlify.app/',
@@ -344,7 +345,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'Dating App - Admin Panel',
-		description: 'A ReactJS admin panel for a dating app',
+		description:
+			'A comprehensive admin panel that empowers administrators to manage and monitor coffee shop owners, handle requests, and oversee the dating app users, ensuring smooth operations.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://dating-app-admin.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/dating-app.admin',
@@ -352,7 +354,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'Dating App - Backend',
-		description: 'A NodeJS backend for a dating app',
+		description:
+			'A robust NodeJS backend that seamlessly processes requests for both the landing page and admin panel. It also features a socket server, enabling Facebook-like functionality for the dating app.',
 		tags: [
 			TAGS.NodeJS,
 			TAGS.ExpressJS,
@@ -366,7 +369,7 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Landing Page',
-		description: 'A ReactJS website for LevTours',
+		description: 'A vibrant tourism platform where users can reserve hotel rooms, read travel blogs, and explore curated tourist experiences.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
 		site_link: 'https://levtours-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.website',
@@ -374,7 +377,7 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Admin Panel',
-		description: 'A ReactJS admin panel for LevTours',
+		description: 'A comprehensive dashboard for admins to oversee user activities, manage bookings, curate blogs, and introduce promotions via coupons or bulk data imports.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://levtours-admin.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.admin',
@@ -382,7 +385,7 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Backend',
-		description: 'A NodeJS backend for LevTours',
+		description: 'A robust NodeJS backend supporting the entire LevTours ecosystem. Features detailed API documentation in Swagger for seamless integration.',
 		tags: [
 			TAGS.NodeJS,
 			TAGS.ExpressJS,
@@ -392,7 +395,8 @@ const projects: Project[] = [
 		],
 		source_code_link: 'https://github.com/Vinayak1337/levtours.server',
 		company: 'Possibillion Technologies'
-	},
+	}
+	,
 	{
 		name: 'Firework - Frontend',
 		description: 'A ReactJS frontend for Firework',
