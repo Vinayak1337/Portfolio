@@ -4,7 +4,7 @@ import { Tilt } from 'react-tilt';
 import { SectionWrapper } from './hoc';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { projects } from '@/constants';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { github, openInNew } from '@/assets';
 import hexToFilter from '@/utils/HexToFilter';
 import Img from 'next/image';
@@ -60,7 +60,8 @@ const ProjectCard: FC<ProjectCardProps> = ({
 	source_code_link,
 	tags,
 	site_link,
-	refId
+	refId,
+	company
 }) => {
 	const [inViewRef, inView] = useInView({
 		threshold: 0.5,
@@ -69,7 +70,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
 	if (!inView)
 		return (
-			<div ref={inViewRef} className='project-placeholder w-full'>
+			<div id={refId} ref={inViewRef} className='project-placeholder w-full'>
 				<ComponentLoader />
 			</div>
 		);
@@ -140,18 +141,18 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
 					<div className='mt-5'>
 						<h3 className='text-white font-bold text-2xl'>{name}</h3>
+						{company && <p className='text-xs text-purple-300'>{company}</p>}
 						<p className='mt-2 text-secondary text-sm'>{description}</p>
 					</div>
 				</div>
 
 				<div className='mt-5 flex flex-wrap gap-2'>
-					{tags.map(({ name, color }, index) => (
-						<p
-							key={`tag-${index}-${name}`}
-							className={`text-sm text-[${color}]`}>
-							#{name}
-						</p>
-					))}
+					{tags?.length &&
+						tags.map(({ name, color }, index) => (
+							<p key={`tag-${index}-${name}`} className={`text-sm text-bold ${color}`}>
+								#{name}
+							</p>
+						))}
 				</div>
 			</Tilt>
 		</motion.div>

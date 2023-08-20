@@ -137,36 +137,6 @@ const experiences: {
 			'This journey was complemented by a diverse toolkit utilization, encompassing, Apollo Client, GraphQL, Styled-Components, Shopify and more, underscoring my ability to deliver versatile web and mobile solutions.'
 		],
 		projectReference: '#wonderhood-projects'
-		// projects: [
-		// 	{
-		// 		type: 'unitary',
-		// 		project: {
-		// 			name: 'wonderLearn (ReactJs)',
-		// 			link: 'https://wonderhood.in/'
-		// 		}
-		// 	},
-		// 	{
-		// 		type: 'unitary',
-		// 		project: {
-		// 			name: 'wonderLearn (NextJs)',
-		// 			link: 'https://thewonderhood.com/'
-		// 		}
-		// 	},
-		// 	{
-		// 		type: 'unitary',
-		// 		project: {
-		// 			name: 'wonderLearn App (React Native)',
-		// 			link: 'https://wonderlearn.app.link/app'
-		// 		}
-		// 	},
-		// 	{
-		// 		type: 'unitary',
-		// 		project: {
-		// 			name: 'MyLearning',
-		// 			link: 'https://mylearning.thewonderhood.com/'
-		// 		}
-		// 	}
-		// ]
 	},
 	{
 		title: 'MERN-Stack Developer',
@@ -181,61 +151,119 @@ const experiences: {
 			'Leveraged foundational knowledge in JavaScript, gained from 2.5 years of hobbyist Discord bot development, to swiftly adapt and excel in React and Node.js environments. Despite being in the early stages of my React journey, I consistently delivered UI designs that perfectly aligned with client expectations.'
 		],
 		projectReference: '#possibillion-projects'
-		// projects: [
-		// 	{
-		// 		name: 'Dating App',
-		// 		type: 'package',
-		// 		packages: [
-		// 			{
-		// 				name: 'Admin Panel',
-		// 				github: 'https://github.com/Vinayak1337/dating-app.admin'
-		// 			},
-		// 			{
-		// 				name: 'Landing Page',
-		// 				github: 'https://github.com/Vinayak1337/dating-app.website'
-		// 			},
-		// 			{
-		// 				name: 'Backend',
-		// 				github: 'https://github.com/Vinayak1337/dating-app.server'
-		// 			}
-		// 		]
-		// 	},
-		// 	{
-		// 		name: 'LevTours',
-		// 		type: 'package',
-		// 		packages: [
-		// 			{
-		// 				name: 'Landing Page',
-		// 				link: 'https://levtours-website.netlify.app/',
-		// 				github: 'https://github.com/Vinayak1337/levtours.website'
-		// 			},
-		// 			{
-		// 				name: 'Admin Panel',
-		// 				github: 'https://github.com/Vinayak1337/levtours.admin'
-		// 			},
-		// 			{
-		// 				name: 'Backend',
-		// 				github: 'https://github.com/Vinayak1337/levtours.server'
-		// 			}
-		// 		]
-		// 	},
-		// 	{
-		// 		name: 'Firework',
-		// 		type: 'package',
-		// 		packages: [
-		// 			{
-		// 				name: 'Frontend',
-		// 				github: 'https://github.com/Vinayak1337/firework.frontend'
-		// 			},
-		// 			{
-		// 				name: 'Backend',
-		// 				github: 'https://github.com/Vinayak1337/firework.backend'
-		// 			}
-		// 		]
-		// 	}
-		// ]
 	}
 ];
+
+const TAGS = {
+	ReactJS: {
+		name: 'ReactJS',
+		color: 'react-text-gradient'
+	},
+	NextJS: {
+		name: 'NextJS',
+		color: 'next-text-gradient'
+	},
+	ReduxToolkit: {
+		name: 'Redux Toolkit',
+		color: 'redux-toolkit-text-gradient'
+	},
+	Redux: {
+		name: 'Redux',
+		color: 'redux-toolkit-text-gradient'
+	},
+	TailwindCSS: {
+		name: 'TailwindCSS',
+		color: 'tailwind-text-gradient'
+	},
+	NodeJS: {
+		name: 'NodeJS',
+		color: 'nodejs-text-gradient'
+	},
+	ExpressJS: {
+		name: 'ExpressJS',
+		color: 'expressjs-text-gradient'
+	},
+	MongoDB: {
+		name: 'MongoDB',
+		color: 'mongodb-text-gradient'
+	},
+	DiscordJS: {
+		name: 'DiscordJS',
+		color: 'discordjs-text-gradient'
+	},
+	SocketIO: {
+		name: 'SocketIO',
+		color: 'socketio-text-gradient'
+	},
+	FFmpeg: {
+		name: 'FFmpeg',
+		color: 'ffmpeg-text-gradient'
+	},
+	S3: {
+		name: 'S3',
+		color: 's3-text-gradient'
+	},
+	JavaScript: {
+		name: 'JavaScript',
+		color: 'javascript-text-gradient'
+	},
+	TypeScript: {
+		name: 'TypeScript',
+		color: 'typescript-text-gradient'
+	},
+	HTML: {
+		name: 'HTML',
+		color: 'html-text-gradient'
+	},
+	CSS: {
+		name: 'CSS',
+		color: 'css-text-gradient'
+	},
+	ReactNative: {
+		name: 'React Native',
+		color: 'react-native-text-gradient'
+	},
+	Ionic: {
+		name: 'Ionic',
+		color: 'ionic-text-gradient'
+	},
+	Flutter: {
+		name: 'Flutter',
+		color: 'flutter-text-gradient'
+	},
+	ReactQuery: {
+		name: 'React Query',
+		color: 'react-query-text-gradient'
+	},
+	NestJS: {
+		name: 'NestJS',
+		color: 'nestjs-text-gradient'
+	},
+	Shopify: {
+		name: 'Shopify',
+		color: 'shopify-text-gradient'
+	},
+	SASS: {
+		name: 'SASS',
+		color: 'sass-text-gradient'
+	},
+	Expo: {
+		name: 'Expo',
+		color: 'expo-text-gradient'
+	},
+	StyledComponents: {
+		name: 'Styled Components',
+		color: 'styled-components-text-gradient'
+	},
+	GraphQL: {
+		name: 'GraphQL',
+		color: 'graphql-text-gradient'
+	},
+	Swagger: {
+		name: 'Swagger',
+		color: 'swagger-text-gradient'
+	}
+};
 
 const testimonials: {
 	testimonial: string;
@@ -248,217 +276,149 @@ const testimonials: {
 const projects: Project[] = [
 	{
 		name: 'wonderHood',
-		description: 'A ReactJS website for wonderLearn',
+		description:
+			"A dynamic React website tailored for adaptability, catering to evolving marketing and SEO needs. Integrated with Shopify's GraphQL API, it offers a seamless user experience, bolstered by advanced features like lazy loading for optimal performance.",
 		refId: 'wonderhood-projects',
 		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
+			TAGS.ReactJS,
+			TAGS.SASS,
+			TAGS.Shopify,
+			TAGS.ReduxToolkit,
+			TAGS.JavaScript
 		],
 		site_link: 'https://wonderhood.in/',
-		image: wonderHood
+		image: wonderHood,
+		company: 'wonderHood'
 	},
 	{
 		name: 'wonderLearn',
-		description: 'A NextJS website for wonderLearn',
+		description:
+			'An upgraded version of the wonderHood site with redesigned UI, rebuilt using Next.js to address performance bottlenecks & SEO. The site leverages ISR, SSG, and SSR for enhanced speed and responsiveness. It also features a custom API to streamline Shopify data, and a shift to TailwindCSS for faster page construction.',
 		tags: [
-			{
-				name: 'NextJS',
-				color: '#000000'
-			},
-			{
-				name: 'TailwindCSS',
-				color: '#38B2AC'
-			}
+			TAGS.NextJS,
+			TAGS.TailwindCSS,
+			TAGS.Shopify,
+			TAGS.GraphQL,
+			TAGS.TypeScript
 		],
-		site_link: 'https://thewonderlearn.com/'
+		site_link: 'https://thewonderlearn.com/',
+		company: 'wonderHood'
 	},
 	{
 		name: 'wonderLearn App',
-		description: 'A React Native app for wonderLearn',
+		description:
+			'A mobile learning app for children aged 2-6, offering engaging games and videos. While the web version serves educators, focusing on young learners. It received a UI redesign to enhance its child-friendly appeal.',
 		site_link: 'https://wonderlearn.app.link/app',
 		tags: [
-			{
-				name: 'React Native',
-				color: '#61DBFB'
-			},
-			{
-				name: 'Redux Toolkit',
-				color: '#764ABC'
-			}
-		]
+			TAGS.ReactNative,
+			TAGS.Ionic,
+			TAGS.Expo,
+			TAGS.StyledComponents,
+			TAGS.ReduxToolkit,
+			TAGS.TypeScript
+		],
+		company: 'wonderHood'
 	},
 	{
 		name: 'MyLearning',
-		description: 'A ReactJS website for MyLearning',
+		description:
+			'A specialized platform for educators, the MyLearning school dashboard is a React-based website that facilitates the management of student activities. Educators can generate detailed student reports, visualize data through charts, and gain insights to enhance the learning experience.',
 		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
+			TAGS.ReactJS,
+			TAGS.StyledComponents,
+			TAGS.ReduxToolkit,
+			TAGS.Ionic,
+			TAGS.TypeScript
 		],
-		site_link: 'https://mylearning.thewonderlearn.com/'
+		site_link: 'https://mylearning.thewonderlearn.com/',
+		company: 'wonderHood'
 	},
 	{
 		name: 'Dating App - Landing Page',
 		description: 'A ReactJS website for a dating app',
 		refId: 'possibillion-projects',
-		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
-		],
+		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.TypeScript],
 		site_link: 'https://dating-app-website.netlify.app/',
-		source_code_link: 'https://github.com/Vinayak1337/dating-app.website'
+		source_code_link: 'https://github.com/Vinayak1337/dating-app.website',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'Dating App - Admin Panel',
 		description: 'A ReactJS admin panel for a dating app',
-		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
-		],
+		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://dating-app-admin.netlify.app/',
-		source_code_link: 'https://github.com/Vinayak1337/dating-app.admin'
+		source_code_link: 'https://github.com/Vinayak1337/dating-app.admin',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'Dating App - Backend',
 		description: 'A NodeJS backend for a dating app',
 		tags: [
-			{
-				name: 'NodeJS',
-				color: '#339933'
-			},
-			{
-				name: 'ExpressJS',
-				color: '#000000'
-			},
-			{
-				name: 'MongoDB',
-				color: '#47A248'
-			}
+			TAGS.NodeJS,
+			TAGS.ExpressJS,
+			TAGS.MongoDB,
+			TAGS.SocketIO,
+			TAGS.JavaScript,
+			TAGS.Swagger
 		],
-		source_code_link: 'https://github.com/Vinayak1337/dating-app.server'
+		source_code_link: 'https://github.com/Vinayak1337/dating-app.server',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'LevTours - Landing Page',
 		description: 'A ReactJS website for LevTours',
-		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
-		],
+		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
 		site_link: 'https://levtours-website.netlify.app/',
-		source_code_link: 'https://github.com/Vinayak1337/levtours.website'
+		source_code_link: 'https://github.com/Vinayak1337/levtours.website',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'LevTours - Admin Panel',
 		description: 'A ReactJS admin panel for LevTours',
-		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
-		],
+		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://levtours-admin.netlify.app/',
-		source_code_link: 'https://github.com/Vinayak1337/levtours.admin'
+		source_code_link: 'https://github.com/Vinayak1337/levtours.admin',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'LevTours - Backend',
 		description: 'A NodeJS backend for LevTours',
 		tags: [
-			{
-				name: 'NodeJS',
-				color: '#339933'
-			},
-			{
-				name: 'ExpressJS',
-				color: '#000000'
-			},
-			{
-				name: 'MongoDB',
-				color: '#47A248'
-			}
+			TAGS.NodeJS,
+			TAGS.ExpressJS,
+			TAGS.MongoDB,
+			TAGS.Swagger,
+			TAGS.JavaScript
 		],
-		source_code_link: 'https://github.com/Vinayak1337/levtours.server'
+		source_code_link: 'https://github.com/Vinayak1337/levtours.server',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'Firework - Frontend',
 		description: 'A ReactJS frontend for Firework',
-		tags: [
-			{
-				name: 'ReactJS',
-				color: '#61DBFB'
-			},
-			{
-				name: 'SASS',
-				color: '#CD6799'
-			}
-		],
+		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://firework-website.netlify.app/',
-		source_code_link: 'https://github.com/Vinayak1337/firework.frontend'
+		source_code_link: 'https://github.com/Vinayak1337/firework.frontend',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'Firework - Backend',
 		description: 'A NodeJS backend for Firework',
 		tags: [
-			{
-				name: 'NodeJS',
-				color: '#339933'
-			},
-			{
-				name: 'ExpressJS',
-				color: '#000000'
-			},
-			{
-				name: 'MongoDB',
-				color: '#47A248'
-			}
+			TAGS.NodeJS,
+			TAGS.ExpressJS,
+			TAGS.MongoDB,
+			TAGS.FFmpeg,
+			TAGS.S3,
+			TAGS.JavaScript
 		],
-		source_code_link: 'https://github.com/Vinayak1337/firework.backend'
+		source_code_link: 'https://github.com/Vinayak1337/firework.backend',
+		company: 'Possibillion Technologies'
 	},
 	{
 		name: 'Relics Audit',
 		description: 'A Discord bot for Relics Organization',
-		tags: [
-			{
-				name: 'NodeJS',
-				color: '#339933'
-			},
-			{
-				name: 'DiscordJS',
-				color: '#7289DA'
-			}
-		],
+		tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.MongoDB, TAGS.NodeJS],
 		source_code_link: 'https://github.com/Vinayak1337/RelicsAudit'
 	}
 ];

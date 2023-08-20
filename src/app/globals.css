@@ -135,23 +135,6 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
-.blue-text-gradient {
-	/* background: -webkit-linear-gradient(#eee, #333); */
-	background: #56ccf2; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to top,
-		#2f80ed,
-		#56ccf2
-	); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to top,
-		#2f80ed,
-		#56ccf2
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 .pink-text-gradient {
 	background: #ec008c; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
@@ -164,6 +147,167 @@ body {
 		#ec008c,
 		#fc6767
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.react-text-gradient {
+	background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2);
+	background: linear-gradient(to top, #2f80ed, #56ccf2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.next-text-gradient {
+	background: -webkit-linear-gradient(to top, #000000, #666666);
+	background: linear-gradient(to top, #000000, #666666);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.sass-text-gradient {
+	background: -webkit-linear-gradient(to top, #ff4b2b, #ff6699);
+	background: linear-gradient(to top, #ff4b2b, #ff6699);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.shopify-text-gradient {
+	background: -webkit-linear-gradient(to top, #50b83c, #2cbe4e);
+	background: linear-gradient(to top, #50b83c, #2cbe4e);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.tailwind-text-gradient {
+	background: -webkit-linear-gradient(to top, #14b8a6, #2dd4bf);
+	background: linear-gradient(to top, #14b8a6, #2dd4bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.redux-toolkit-text-gradient {
+	background: linear-gradient(to top, #764abc, #9a51e0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.nodejs-text-gradient {
+	background: linear-gradient(to top, #539e43, #68a063);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.expressjs-text-gradient {
+	background: linear-gradient(to top, #444, #555);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.mongodb-text-gradient {
+	background: linear-gradient(to top, #4db33d, #58d26d);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.discordjs-text-gradient {
+	background: linear-gradient(to top, #7289da, #8ba1e7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.socketio-text-gradient {
+	background: linear-gradient(to top, #2a2a2a, #4caf50);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.ffmpeg-text-gradient {
+	background: linear-gradient(to top, #e82c0c, #ff4c2f);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.s3-text-gradient {
+	background: linear-gradient(to top, #569a31, #6bb43a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.javascript-text-gradient {
+	background: linear-gradient(to top, #f7df1e, #ffef58);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.typescript-text-gradient {
+	background: linear-gradient(to top, #007acc, #2a8fd6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.html-text-gradient {
+	background: linear-gradient(to top, #e44d26, #f0653f);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.css-text-gradient {
+	background: linear-gradient(to top, #264de4, #3a6fe7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.react-native-text-gradient {
+	background: linear-gradient(to top, #61dafb, #83e5ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.ionic-text-gradient {
+	background: linear-gradient(to top, #4e8ef7, #689ffc);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.flutter-text-gradient {
+	background: linear-gradient(to top, #02569b, #037ab7);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.react-query-text-gradient {
+	background: linear-gradient(to top, #ff416c, #ff6482);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.nestjs-text-gradient {
+	background: linear-gradient(to top, #e0234e, #ff3756);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.styled-components-text-gradient {
+	background: linear-gradient(to top, #db7093, #ff85b0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.expo-text-gradient {
+	background: linear-gradient(to top, #000020, #4630eb);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.graphql-text-gradient {
+	background: linear-gradient(to top, #e10098, #de33a6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.swagger-text-gradient {
+	background: linear-gradient(to top, #6ca50f, #85c638);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

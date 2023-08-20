@@ -4,11 +4,12 @@
 interface BaseProject {
 	name: string;
 	description: string;
-	tags: {
+	tags?: {
 		name: string;
 		color: string;
 	}[];
 	refId?: string;
+	company?: string;
 }
 
 interface WithLink extends BaseProject {
