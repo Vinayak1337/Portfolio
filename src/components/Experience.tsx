@@ -12,7 +12,6 @@ import { SectionWrapper } from './hoc';
 import { textVariant } from '@/utils/motion';
 import { FC } from 'react';
 import Img from 'next/image';
-import Link from 'next/link';
 import hexToFilter from '@/utils/HexToFilter';
 
 const Experience = () => (
@@ -107,88 +106,9 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 					}}
 				/>
 			</a>
-
-			{/* <details className='transition-all duration-500'>
-				<summary className='text-white-100 text-sm pl-1 tracking-wider'>
-					Projects
-				</summary>
-				<ul className='list-disc ml-5'>
-					{projects.map((project, index) => {
-						switch (project.type) {
-							case 'unitary':
-								return (
-									<WorkProjectUI
-										key={`project-${index}-${project.name}`}
-										{...project.project}
-									/>
-								);
-
-							default:
-								return (
-									<PackageProjectUI
-										key={`project-${index}-${project.name}`}
-										{...project}
-									/>
-								);
-						}
-					})}
-				</ul>
-			</details> */}
 		</div>
 	</VerticalTimelineElement>
 );
-
-// const WorkProjectUI: FC<WorkProject> = ({
-// 	name,
-// 	github: githubURL,
-// 	link: siteURL
-// }) => (
-// 	<li className='text-white-100 text-sm pl-1 tracking-wider items-center flex gap-2'>
-// 		<p>{name}</p>
-// 		{githubURL && (
-// 			<a
-// 				href={githubURL}
-// 				target='_blank'
-// 				className='rounded-full flex justify-center items-center cursor-pointer'>
-// 				<Img
-// 					src={github}
-// 					alt={`${name} github`}
-// 					className='object-contain'
-// 					width={24}
-// 					height={24}
-// 				/>
-// 			</a>
-// 		)}
-// 		{siteURL && (
-// 			<a
-// 				href={siteURL}
-// 				target='_blank'
-// 				className='rounded-full flex justify-center items-center cursor-pointer'>
-// 				<Img
-// 					className='-rotate-90 object-contain'
-// 					width={24}
-// 					height={24}
-// 					src={openInNew}
-// 					alt={name}
-// 					style={{
-// 						filter: hexToFilter('#fff').filter.slice(0, -1).slice(7)
-// 					}}
-// 				/>
-// 			</a>
-// 		)}
-// 	</li>
-// );
-
-// const PackageProjectUI: FC<PackageProject> = ({ name, packages }) => (
-// 	<li className='text-white-100 text-sm pl-1 tracking-wider'>
-// 		<p>{name}</p>
-// 		<ul className='ml-5'>
-// 			{packages.map((pack, index) => (
-// 				<WorkProjectUI key={`package-${index}-${pack.name}`} {...pack} />
-// 			))}
-// 		</ul>
-// 	</li>
-// );
 
 interface ExperienceCardProps {
 	title: string;

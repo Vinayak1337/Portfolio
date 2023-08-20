@@ -5,23 +5,38 @@ import * as random from 'maath/random/dist/maath-random.cjs';
 import { Suspense, useMemo, useRef } from 'react';
 import type { Points as PointsType } from 'three';
 import Loader from '../Loader';
+import { useInView } from 'react-intersection-observer';
 
-const StarsCanvas = () => (
-	<div className='w-full h-auto absolute inset-0 -z-10'>
-		<Canvas
-			gl={{
-				preserveDrawingBuffer: true,
-				alpha: true
-			}}
-			camera={{ position: [0, 0, 1] }}>
-			<Preload all />
+const StarsCanvas = () => {
+	const [inViewRef, inView] = useInView({
+		triggerOnce: true,
+		threshold: 0.1
+	});
 
-			<Suspense fallback={<Loader />}>
-				<Stars />
-			</Suspense>
-		</Canvas>
-	</div>
-);
+	if (!inView)
+		return (
+			<div
+				className='w-full h-auto absolute inset-0 -z-10'
+				ref={inViewRef}></div>
+		);
+
+	return (
+		<div className='w-full h-auto absolute inset-0 -z-10'>
+			<Canvas
+				gl={{
+					preserveDrawingBuffer: true,
+					alpha: true
+				}}
+				camera={{ position: [0, 0, 1] }}>
+				<Preload all />
+
+				<Suspense fallback={<Loader />}>
+					<Stars />
+				</Suspense>
+			</Canvas>
+		</div>
+	);
+};
 
 const Stars = () => {
 	const ref = useRef<PointsType>(null);

@@ -8,23 +8,39 @@ import {
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { FC, Suspense } from 'react';
-import Loader from '../Loader';
+import Loader, { ComponentLoader } from '../Loader';
 import { StaticImageData } from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
-const BallCanvas: FC<BallCanvasProps> = ({ icon }) => (
-	<Canvas
-		frameloop='demand'
-		gl={{
-			preserveDrawingBuffer: true, alpha: true
-		}}>
-		<Preload all />
+const BallCanvas: FC<BallCanvasProps> = ({ icon }) => {
+	const [inViewRef, inView] = useInView({
+		triggerOnce: true,
+		threshold: 0.1
+	});
 
-		<Suspense fallback={<Loader />}>
-			<OrbitControls enableZoom={false} />
-			<Ball imgUrl={icon.src} />
-		</Suspense>
-	</Canvas>
-);
+	if (!inView)
+		return (
+			<div ref={inViewRef}>
+				<ComponentLoader />
+			</div>
+		);
+
+	return (
+		<Canvas
+			frameloop='demand'
+			gl={{
+				preserveDrawingBuffer: true,
+				alpha: true
+			}}>
+			<Preload all />
+
+			<Suspense fallback={<Loader />}>
+				<OrbitControls enableZoom={false} />
+				<Ball imgUrl={icon.src} />
+			</Suspense>
+		</Canvas>
+	);
+};
 
 export default BallCanvas;
 
