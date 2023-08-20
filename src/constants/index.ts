@@ -369,7 +369,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Landing Page',
-		description: 'A vibrant tourism platform where users can reserve hotel rooms, read travel blogs, and explore curated tourist experiences.',
+		description:
+			'A vibrant tourism platform where users can reserve hotel rooms, read travel blogs, and explore curated tourist experiences.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
 		site_link: 'https://levtours-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.website',
@@ -377,7 +378,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Admin Panel',
-		description: 'A comprehensive dashboard for admins to oversee user activities, manage bookings, curate blogs, and introduce promotions via coupons or bulk data imports.',
+		description:
+			'A comprehensive dashboard for admins to oversee user activities, manage bookings, curate blogs, and introduce promotions via coupons or bulk data imports.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://levtours-admin.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.admin',
@@ -385,7 +387,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'LevTours - Backend',
-		description: 'A robust NodeJS backend supporting the entire LevTours ecosystem. Features detailed API documentation in Swagger for seamless integration.',
+		description:
+			'A robust NodeJS backend supporting the entire LevTours ecosystem. Features detailed API documentation in Swagger for seamless integration.',
 		tags: [
 			TAGS.NodeJS,
 			TAGS.ExpressJS,
@@ -395,11 +398,11 @@ const projects: Project[] = [
 		],
 		source_code_link: 'https://github.com/Vinayak1337/levtours.server',
 		company: 'Possibillion Technologies'
-	}
-	,
+	},
 	{
 		name: 'Firework - Frontend',
-		description: 'A ReactJS frontend for Firework',
+		description:
+			'A ReactJS platform for users to upload images or videos with customizable captions. Features a real-time upload progress bar for enhanced user experience.',
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://firework-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/firework.frontend',
@@ -407,7 +410,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'Firework - Backend',
-		description: 'A NodeJS backend for Firework',
+		description:
+			'A NodeJS backend that processes uploads, overlays captions using FFmpeg, and stores the final content in MongoDB and S3.',
 		tags: [
 			TAGS.NodeJS,
 			TAGS.ExpressJS,
@@ -421,7 +425,8 @@ const projects: Project[] = [
 	},
 	{
 		name: 'Relics Audit',
-		description: 'A Discord bot for Relics Organization',
+		description:
+			'A Discord bot for the Relics Organization, offering real-time club monitoring, member verification, seasonal ladder management, and detailed statistics, ensuring a seamless experience for the community.',
 		tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.MongoDB, TAGS.NodeJS],
 		source_code_link: 'https://github.com/Vinayak1337/RelicsAudit'
 	}
