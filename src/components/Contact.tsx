@@ -21,9 +21,9 @@ const EarthCanvas = dynamic(() => import('./canvas/Earth'), {
 });
 
 const IDs = {
-	TEMPLATE_ID: 'template_23jfgox',
-	SERVICE_ID: 'service_9pjda2t',
-	PUBLIC_KEY: 'Owa_ETtDeVHjvLiIn'
+	TEMPLATE_ID: process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+	SERVICE_ID: process.env.NEXT_PUBLIC_SERVICE_ID!,
+	PUBLIC_KEY: process.env.NEXT_PUBLIC_PUBLIC_KEY!
 };
 
 const INITIAL_STATE = {

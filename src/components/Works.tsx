@@ -96,7 +96,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							loading='lazy'
 							src={
 								image ||
-								`https://api.apiflash.com/v1/urltoimage?access_key=6de4058c9d2143188cbf8f41974b547d&url=${
+								`https://api.apiflash.com/v1/urltoimage?access_key=${process.env.NEXT_PUBLIC_API_FLASH}&url=${
 									site_link || source_code_link
 								}&format=png&quality=100&response_type=image&scale_factor=2`
 							}
