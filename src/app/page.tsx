@@ -9,8 +9,11 @@ import StarsCanvas from '@/components/canvas/Stars';
 import Tech from '@/components/Tech';
 import Works from '@/components/Works';
 import { MixpanelProvider } from 'react-mixpanel-browser';
+import { usePageAnalytics } from '@/hooks/useAnalytics';
 
 export default function Home() {
+	usePageAnalytics();
+
 	return (
 		<MixpanelProvider token={process.env.NEXT_PUBLIC_MIXPANEL_TOKEN}>
 			<Navbar />
