@@ -10,6 +10,7 @@ import hexToFilter from '@/utils/HexToFilter';
 import Img from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { ComponentLoader } from './Loader';
+import useAnalytics from '@/hooks/useAnalytics';
 
 const Works = () => (
 	<>
@@ -63,10 +64,22 @@ const ProjectCard: FC<ProjectCardProps> = ({
 	refId,
 	company
 }) => {
+	const { track } = useAnalytics();
 	const [inViewRef, inView] = useInView({
 		threshold: 0.5,
 		triggerOnce: true
 	});
+
+	const handleClick =
+		(isGithub = false) =>
+		() =>
+			track(name, {
+				name,
+				type: 'project',
+				site_link,
+				source_code_link,
+				clicked: isGithub ? 'github' : 'site'
+			});
 
 	if (!inView)
 		return (
@@ -96,7 +109,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							loading='lazy'
 							src={
 								image ||
-								`https://api.apiflash.com/v1/urltoimage?access_key=${process.env.NEXT_PUBLIC_API_FLASH}&url=${
+								`https://api.apiflash.com/v1/urltoimage?access_key=${
+									process.env.NEXT_PUBLIC_API_FLASH
+								}&url=${
 									site_link || source_code_link
 								}&format=png&quality=100&response_type=image&scale_factor=2`
 							}
@@ -109,6 +124,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 						<div className='absolute inset-0 gap-2 flex justify-end m-3 card-img_hover'>
 							{source_code_link && (
 								<a
+									onClick={handleClick(true)}
 									href={source_code_link}
 									target='_blank'
 									className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
@@ -122,6 +138,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							)}
 							{site_link && (
 								<a
+									onClick={handleClick()}
 									href={site_link}
 									target='_blank'
 									className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
@@ -149,7 +166,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
 				<div className='flex flex-wrap gap-2'>
 					{tags?.length &&
 						tags.map(({ name, color }, index) => (
-							<p key={`tag-${index}-${name}`} className={`text-sm text-bold ${color}`}>
+							<p
+								key={`tag-${index}-${name}`}
+								className={`text-sm text-bold ${color}`}>
 								#{name}
 							</p>
 						))}

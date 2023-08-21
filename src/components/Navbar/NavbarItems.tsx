@@ -1,5 +1,6 @@
 'use client';
 import { navLinks } from '@/constants';
+import useAnalytics from '@/hooks/useAnalytics';
 import { FC } from 'react';
 
 const NavbarItems: FC<NavbarItemsProps> = ({
@@ -12,6 +13,13 @@ const NavbarItems: FC<NavbarItemsProps> = ({
 	const ulClasses = isMobile
 		? 'list-none flex justify-end items-center flex-col gap-4'
 		: 'list-none hidden sm:flex flex-row gap-10';
+
+	const { track } = useAnalytics();
+
+	const handleCLick = (title: string) => () =>
+		track('Navbar Item Click', {
+			title
+		});
 
 	return (
 		<ul className={ulClasses + ' transition-all duration-300'}>
@@ -30,7 +38,9 @@ const NavbarItems: FC<NavbarItemsProps> = ({
 
 				return (
 					<li key={i + link.id} className={liClasses} onClick={handleClick}>
-						<a href={`#${link.id}`}>{link.title}</a>
+						<a onClick={handleCLick(link.title)} href={`#${link.id}`}>
+							{link.title}
+						</a>
 					</li>
 				);
 			})}

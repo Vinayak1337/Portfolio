@@ -14,6 +14,7 @@ import PulseLoader from 'react-spinners/PulseLoader';
 import useToast from '@/hooks/useToast';
 import dynamic from 'next/dynamic';
 import { ComponentLoader } from './Loader';
+import useAnalytics from '@/hooks/useAnalytics';
 
 const EarthCanvas = dynamic(() => import('./canvas/Earth'), {
 	ssr: false,
@@ -36,6 +37,8 @@ const Contact = () => {
 	const [form, setForm] = useState(INITIAL_STATE),
 		{ name, email, message } = form;
 
+	const { identify } = useAnalytics();
+
 	const formRef = useRef<HTMLFormElement>(null);
 	const [loading, setLoading] = useState(false);
 
@@ -51,6 +54,11 @@ const Contact = () => {
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+
+		identify(email, {
+			name,
+			email
+		});
 
 		if (!formRef.current?.checkValidity())
 			return toast.error('Please fill all the fields.');

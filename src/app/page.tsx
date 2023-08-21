@@ -1,3 +1,4 @@
+'use client';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
@@ -7,10 +8,11 @@ import Navbar from '@/components/Navbar/Navbar';
 import StarsCanvas from '@/components/canvas/Stars';
 import Tech from '@/components/Tech';
 import Works from '@/components/Works';
+import { MixpanelProvider } from 'react-mixpanel-browser';
 
 export default function Home() {
 	return (
-		<>
+		<MixpanelProvider token={process.env.NEXT_PUBLIC_MIXPANEL_TOKEN}>
 			<Navbar />
 			<main className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
 				<Hero />
@@ -24,6 +26,6 @@ export default function Home() {
 				<Contact />
 				<StarsCanvas />
 			</div>
-		</>
+		</MixpanelProvider>
 	);
 }
