@@ -27,7 +27,7 @@ export default function useAnalytics() {
 }
 
 export const usePageAnalytics = () => {
-	const router = useRouter();
+	const router = useRouter?.call(null);
 	const { track } = useAnalytics();
 
 	useEffect(() => {
