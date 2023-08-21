@@ -1,7 +1,7 @@
 import { useMixpanel } from 'react-mixpanel-browser';
 import { useEffect, useMemo } from 'react';
 import va from '@vercel/analytics';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export default function useAnalytics() {
 	const mixpanel = useMixpanel();
@@ -9,16 +9,16 @@ export default function useAnalytics() {
 	return useMemo(
 		() => ({
 			track: (eventName: string, data = {}) => {
-				if (mixpanel.config.token) {
-					mixpanel.track(eventName, data);
+				if (mixpanel?.config.token) {
+					mixpanel?.track(eventName, data);
 				}
 
 				va.track(eventName, data);
 			},
 			identify: (phone: string, data = {}) => {
-				if (mixpanel.config.token) {
-					mixpanel.identify(phone);
-					mixpanel.people.set(data);
+				if (mixpanel?.config.token) {
+					mixpanel?.identify(phone);
+					mixpanel?.people.set(data);
 				}
 			}
 		}),
@@ -27,12 +27,10 @@ export default function useAnalytics() {
 }
 
 export const usePageAnalytics = () => {
-	const router = useRouter?.call(null);
+	const pathname = usePathname();
 	const { track } = useAnalytics();
 
 	useEffect(() => {
-		track(router.pathname, {
-			...router
-		});
-	}, [router, track]);
+		track(pathname);
+	}, [pathname, track]);
 };
