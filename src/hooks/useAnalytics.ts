@@ -10,15 +10,15 @@ export default function useAnalytics() {
 		() => ({
 			track: (eventName: string, data = {}) => {
 				if (mixpanel?.config.token) {
-					mixpanel?.track(eventName, data);
+					mixpanel.track(eventName, data);
 				}
 
 				va.track(eventName, data);
 			},
 			identify: (phone: string, data = {}) => {
-				if (mixpanel?.config.token) {
-					mixpanel?.identify(phone);
-					mixpanel?.people.set(data);
+				if (mixpanel.config.token) {
+					mixpanel.identify(phone);
+					mixpanel.people.set(data);
 				}
 			}
 		}),
