@@ -14,8 +14,6 @@ import {
 	git,
 	figma,
 	docker,
-	jobit,
-	tripguide,
 	threejs
 } from '../assets';
 import { wonderHood } from './base64Images';
