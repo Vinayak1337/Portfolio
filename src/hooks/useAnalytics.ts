@@ -31,6 +31,8 @@ export const usePageAnalytics = () => {
 	const { track } = useAnalytics();
 
 	useEffect(() => {
-		track(pathname);
+		track(pathname, {
+			pathname
+		});
 	}, [pathname, track]);
 };
