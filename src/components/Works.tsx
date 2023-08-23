@@ -14,13 +14,15 @@ import useAnalytics from '@/hooks/useAnalytics';
 
 const Works = () => (
 	<>
-		<motion.div variants={textVariant()}>
+		<motion.div initial='hidden' animate='show' variants={textVariant()}>
 			<p className='sectionSubText'>My work</p>
 			<h2 className='sectionHeadText'>Projects</h2>
 		</motion.div>
 
 		<div className='w-full flex'>
 			<motion.p
+				initial='hidden'
+				animate='show'
 				variants={fadeIn('', '', 0.1, 1)}
 				className='mt-3 text-secondary text-lg max-w-3xl'>
 				As a passionate and skilled MERN stack developer, I have worked on a
@@ -65,10 +67,10 @@ const ProjectCard: FC<ProjectCardProps> = ({
 	company
 }) => {
 	const { track } = useAnalytics();
-	const [inViewRef, inView] = useInView({
-		threshold: 0.5,
-		triggerOnce: true
-	});
+	// const [inViewRef, inView] = useInView({
+	// 	threshold: 0.5,
+	// 	triggerOnce: true
+	// });
 
 	const handleClick =
 		(isGithub = false) =>
@@ -81,18 +83,26 @@ const ProjectCard: FC<ProjectCardProps> = ({
 				clicked: isGithub ? 'github' : 'site'
 			});
 
-	if (!inView)
-		return (
-			<div id={refId} ref={inViewRef} className='project-placeholder w-full'>
-				<ComponentLoader />
-			</div>
-		);
+	// if (!inView)
+	// 	return (
+	// 		<div id={refId} ref={inViewRef} className='project-placeholder w-full'>
+	// 			<ComponentLoader />
+	// 		</div>
+	// 	);
+
+	const imgUrl =
+		image ||
+		`https://api.apiflash.com/v1/urltoimage?access_key=${
+			process.env.NEXT_PUBLIC_API_FLASH
+		}&url=${
+			site_link || source_code_link
+		}&format=png&quality=100&response_type=image&scale_factor=2`;
 
 	return (
 		<motion.div
 			initial='hidden'
 			animate='show'
-			variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+			variants={fadeIn('up', 'spring', index * 0.2, 0.75)}>
 			<span className='hash-span' id={refId}>
 				&nbsp;
 			</span>
@@ -107,18 +117,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
 					<div className='relative w-full h-[14.5rem]'>
 						<Img
 							loading='lazy'
-							src={
-								image ||
-								`https://api.apiflash.com/v1/urltoimage?access_key=${
-									process.env.NEXT_PUBLIC_API_FLASH
-								}&url=${
-									site_link || source_code_link
-								}&format=png&quality=100&response_type=image&scale_factor=2`
-							}
+							src={imgUrl}
 							alt={name}
 							className='object-cover w-full h-full rounded-2xl'
 							width={220}
 							height={232}
+							placeholder='blur'
+							blurDataURL={imgUrl}
 						/>
 
 						<div className='absolute inset-0 gap-2 flex justify-end m-3 card-img_hover'>
