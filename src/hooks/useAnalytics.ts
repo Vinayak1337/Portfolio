@@ -28,11 +28,11 @@ export default function useAnalytics() {
 
 export const usePageAnalytics = () => {
 	const pathname = usePathname();
-	const { track } = useAnalytics();
+	const analytics = useAnalytics();
 
 	useEffect(() => {
-		track(pathname, {
+		analytics.track(pathname, {
 			pathname
 		});
-	}, [pathname, track]);
+	}, [pathname, analytics]);
 };
