@@ -11,11 +11,19 @@ import Works from '@/components/Works';
 import { MixpanelProvider } from 'react-mixpanel-browser';
 import { usePageAnalytics } from '@/hooks/useAnalytics';
 
-export default function Home() {
+export default function Page() {
+	return (
+		<MixpanelProvider token={process.env.NEXT_PUBLIC_MIXPANEL_TOKEN}>
+			<Home />
+		</MixpanelProvider>
+	);
+}
+
+const Home = () => {
 	usePageAnalytics();
 
 	return (
-		<MixpanelProvider token={process.env.NEXT_PUBLIC_MIXPANEL_TOKEN}>
+		<>
 			<Navbar />
 			<main className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
 				<Hero />
@@ -29,6 +37,6 @@ export default function Home() {
 				<Contact />
 				<StarsCanvas />
 			</div>
-		</MixpanelProvider>
+		</>
 	);
-}
+};

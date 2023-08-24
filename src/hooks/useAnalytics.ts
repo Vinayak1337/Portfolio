@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react';
 import va from '@vercel/analytics';
 import { usePathname } from 'next/navigation';
 
-export default function useAnalytics() {
+export default function useAnalytics(name?: string) {
 	const mixpanel = useMixpanel();
 
 	return useMemo(
@@ -26,13 +26,11 @@ export default function useAnalytics() {
 	);
 }
 
-export const usePageAnalytics = () => {
+export const usePageAnalytics = (name?: string) => {
 	const pathname = usePathname();
-	const analytics = useAnalytics();
+	const { track } = useAnalytics(name);
 
 	useEffect(() => {
-		analytics.track(pathname, {
-			pathname
-		});
-	}, [pathname, analytics]);
+		track(pathname);
+	}, [pathname, track]);
 };
