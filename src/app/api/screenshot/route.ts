@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import puppeteer from 'puppeteer';
 
 export async function GET(req: NextRequest) {
@@ -31,9 +31,10 @@ export async function GET(req: NextRequest) {
 				'Content-Type': 'image/png'
 			}
 		});
-	} catch (error) {
+	} catch (error: any) {
 		return new Response('Error taking screenshot', {
-			status: 300
+			status: 500,
+			statusText: error.message
 		});
 	}
 }
