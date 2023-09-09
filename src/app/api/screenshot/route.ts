@@ -1,23 +1,7 @@
-import { useQuery } from '@/hooks/useQuery';
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest } from 'next/server';
 import puppeteer from 'puppeteer';
 
-const checkReferrer = (
-	req: NextApiRequest,
-	res: NextApiResponse,
-	next: () => void
-) => {
-	const allowedReferrer = process.env.NEXT_PUBLIC_BASE_URL!;
-	const referrer = req.headers.referer;
-
-	if (!referrer || !referrer.startsWith(allowedReferrer)) {
-		return res.status(403).send('Forbidden');
-	}
-
-	next();
-};
-
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
 	let url: RegExpMatchArray | null | undefined | string = decodeURIComponent(
 		req.url!
 	).match(/(?<=\?url=)[^&]+/);
