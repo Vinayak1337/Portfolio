@@ -8,8 +8,8 @@ import { FC } from 'react';
 import { github, openInNew } from '@/assets';
 import hexToFilter from '@/utils/HexToFilter';
 import Img from 'next/image';
-import { useInView } from 'react-intersection-observer';
-import { ComponentLoader } from './Loader';
+// import { useInView } from 'react-intersection-observer';
+// import { ComponentLoader } from './Loader';
 import useAnalytics from '@/hooks/useAnalytics';
 
 const Works = () => (
@@ -123,7 +123,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							width={220}
 							height={232}
 							placeholder='blur'
-							blurDataURL={imgUrl}
+							blurDataURL={typeof imgUrl === 'string' ? imgUrl : undefined}
 						/>
 
 						<div className='absolute inset-0 gap-2 flex justify-end m-3 card-img_hover'>

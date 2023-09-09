@@ -31,7 +31,22 @@ import carrent from './carrent.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
+import wonderHood from './projects/wonderHood.png';
+import wonderLearn from './projects/wonderLearn.png';
+import wonderLearnApp from './projects/wonderLearnApp.png';
+import MyLearning from './projects/MyLearning.png';
+import DatingAppAdmin from './projects/Admin-Dating.png';
+import DatingAppLandingPage from './projects/Landing-Dating.png';
+import DatingAppBackend from './projects/Backend-Dating.png';
+import LevToursAdmin from './projects/Admin-LevTours.png';
+import LevToursLandingPage from './projects/Landing-LevTours.png';
+import LevToursBackend from './projects/Backend-LevTours.png';
+import FireworkFrontend from './projects/Frontend-Firework.png';
+import FireworkBackend from './projects/Backend-Firework.png';
+import RelicsAudit from './projects/RelicsAudit.png';
+
 export {
+	wonderHood,
 	logo,
 	backend,
 	creator,
@@ -60,5 +75,17 @@ export {
 	carrent,
 	jobit,
 	tripguide,
-	openInNew
+	openInNew,
+	wonderLearn,
+	wonderLearnApp,
+	DatingAppAdmin,
+	DatingAppLandingPage,
+	DatingAppBackend,
+	LevToursAdmin,
+	LevToursLandingPage,
+	LevToursBackend,
+	FireworkFrontend,
+	FireworkBackend,
+	RelicsAudit,
+	MyLearning
 };
