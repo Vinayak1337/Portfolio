@@ -32,9 +32,10 @@ export async function GET(req: NextRequest) {
 			}
 		});
 	} catch (error: any) {
-		return new Response('Error taking screenshot', {
-			status: 500,
-			statusText: error.message
+		console.log(error);
+
+		return new Response('Error taking screenshot: ' + error.message, {
+			status: 500
 		});
 	}
 }
