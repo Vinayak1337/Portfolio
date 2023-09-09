@@ -13,13 +13,13 @@ interface BaseProject {
 }
 
 interface WithLink extends BaseProject {
-	image?: string;
+	image?: string | StaticImageData;
 	source_code_link?: string;
 	site_link: string;
 }
 
 interface WithGithub extends BaseProject {
-	image?: string;
+	image?: string | StaticImageData;
 	source_code_link: string;
 	site_link?: string;
 }

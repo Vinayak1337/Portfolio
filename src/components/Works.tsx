@@ -92,11 +92,9 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
 	const imgUrl =
 		image ||
-		`https://api.apiflash.com/v1/urltoimage?access_key=${
-			process.env.NEXT_PUBLIC_API_FLASH
-		}&url=${
-			site_link || source_code_link
-		}&format=png&quality=100&response_type=image&scale_factor=2`;
+		`/api/screenshot?url=${encodeURIComponent(
+			site_link || source_code_link || ''
+		)}`;
 
 	return (
 		<motion.div
@@ -123,7 +121,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							width={220}
 							height={232}
 							placeholder='blur'
-							blurDataURL={imgUrl}
+							blurDataURL={typeof imgUrl === 'string' ? imgUrl : undefined}
 						/>
 
 						<div className='absolute inset-0 gap-2 flex justify-end m-3 card-img_hover'>

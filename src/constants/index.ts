@@ -14,9 +14,9 @@ import {
 	git,
 	figma,
 	docker,
-	threejs
+	threejs,
+	wonderHood
 } from '../assets';
-import { wonderHood } from './base64Images';
 
 export const navLinks = [
 	{
