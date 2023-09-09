@@ -15,7 +15,19 @@ import {
 	figma,
 	docker,
 	threejs,
-	wonderHood
+	wonderHood,
+	wonderLearn,
+	wonderLearnApp,
+	DatingAppAdmin,
+	DatingAppBackend,
+	DatingAppLandingPage,
+	LevToursAdmin,
+	LevToursBackend,
+	FireworkFrontend,
+	FireworkBackend,
+	RelicsAudit,
+	MyLearning,
+	LevToursLandingPage
 } from '../assets';
 
 export const navLinks = [
@@ -300,7 +312,8 @@ const projects: Project[] = [
 			TAGS.TypeScript
 		],
 		site_link: 'https://thewonderlearn.com/',
-		company: 'wonderHood'
+		company: 'wonderHood',
+		image: wonderLearn
 	},
 	{
 		name: 'wonderLearn App',
@@ -315,7 +328,8 @@ const projects: Project[] = [
 			TAGS.ReduxToolkit,
 			TAGS.TypeScript
 		],
-		company: 'wonderHood'
+		company: 'wonderHood',
+		image: wonderLearnApp
 	},
 	{
 		name: 'MyLearning',
@@ -329,7 +343,8 @@ const projects: Project[] = [
 			TAGS.TypeScript
 		],
 		site_link: 'https://mylearning.thewonderlearn.com/',
-		company: 'wonderHood'
+		company: 'wonderHood',
+		image: MyLearning
 	},
 	{
 		name: 'Dating App - Landing Page',
@@ -339,7 +354,8 @@ const projects: Project[] = [
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.TypeScript],
 		site_link: 'https://dating-app-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/dating-app.website',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: DatingAppLandingPage
 	},
 	{
 		name: 'Dating App - Admin Panel',
@@ -348,7 +364,8 @@ const projects: Project[] = [
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://dating-app-admin.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/dating-app.admin',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: DatingAppAdmin
 	},
 	{
 		name: 'Dating App - Backend',
@@ -363,7 +380,8 @@ const projects: Project[] = [
 			TAGS.Swagger
 		],
 		source_code_link: 'https://github.com/Vinayak1337/dating-app.server',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: DatingAppBackend
 	},
 	{
 		name: 'LevTours - Landing Page',
@@ -372,7 +390,8 @@ const projects: Project[] = [
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
 		site_link: 'https://levtours-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.website',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: LevToursLandingPage
 	},
 	{
 		name: 'LevTours - Admin Panel',
@@ -381,7 +400,8 @@ const projects: Project[] = [
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://levtours-admin.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/levtours.admin',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: LevToursAdmin
 	},
 	{
 		name: 'LevTours - Backend',
@@ -395,7 +415,8 @@ const projects: Project[] = [
 			TAGS.JavaScript
 		],
 		source_code_link: 'https://github.com/Vinayak1337/levtours.server',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: LevToursBackend
 	},
 	{
 		name: 'Firework - Frontend',
@@ -404,7 +425,8 @@ const projects: Project[] = [
 		tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
 		site_link: 'https://firework-website.netlify.app/',
 		source_code_link: 'https://github.com/Vinayak1337/firework.frontend',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: FireworkFrontend
 	},
 	{
 		name: 'Firework - Backend',
@@ -419,14 +441,16 @@ const projects: Project[] = [
 			TAGS.JavaScript
 		],
 		source_code_link: 'https://github.com/Vinayak1337/firework.backend',
-		company: 'Possibillion Technologies'
+		company: 'Possibillion Technologies',
+		image: FireworkBackend
 	},
 	{
 		name: 'Relics Audit',
 		description:
 			'A Discord bot for the Relics Organization, offering real-time club monitoring, member verification, seasonal ladder management, and detailed statistics, ensuring a seamless experience for the community.',
 		tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.MongoDB, TAGS.NodeJS],
-		source_code_link: 'https://github.com/Vinayak1337/RelicsAudit'
+		source_code_link: 'https://github.com/Vinayak1337/RelicsAudit',
+		image: RelicsAudit
 	}
 ];
 

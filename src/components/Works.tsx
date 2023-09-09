@@ -8,8 +8,8 @@ import { FC } from 'react';
 import { github, openInNew } from '@/assets';
 import hexToFilter from '@/utils/HexToFilter';
 import Img from 'next/image';
-import { useInView } from 'react-intersection-observer';
-import { ComponentLoader } from './Loader';
+// import { useInView } from 'react-intersection-observer';
+// import { ComponentLoader } from './Loader';
 import useAnalytics from '@/hooks/useAnalytics';
 
 const Works = () => (
@@ -92,9 +92,11 @@ const ProjectCard: FC<ProjectCardProps> = ({
 
 	const imgUrl =
 		image ||
-		`/api/screenshot?url=${encodeURIComponent(
-			site_link || source_code_link || ''
-		)}`;
+		`https://api.apiflash.com/v1/urltoimage?access_key=${
+			process.env.NEXT_PUBLIC_API_FLASH
+		}&url=${
+			site_link || source_code_link
+		}&format=png&quality=100&response_type=image&scale_factor=2`;
 
 	return (
 		<motion.div
