@@ -133,7 +133,7 @@ const experiences: {
 		company_name: 'wonderHood - from Intern to Full-Time',
 		icon: 'https://media.licdn.com/dms/image/C4D0BAQE7GTwnLUxD_g/company-logo_200_200/0/1641382010936?e=1700092800&v=beta&t=v8MM0puWfmdXl0TIOYfKD-Ojy0iNzMZE1qzrpYqoP3M',
 		iconBg: '#018093',
-		date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - Present (Full-Time)',
+		date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - August 2023 (Full-Time)',
 		points: [
 			'As an intern, I revamped an existing React website, addressing bugs and enhancing its alignment with design specs.',
 			'Boosted user engagement through performance optimizations, notably lazy loading.',
