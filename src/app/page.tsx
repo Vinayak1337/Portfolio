@@ -6,7 +6,6 @@ import Feedbacks from '@/components/Feedbacks';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
 import StarsCanvas from '@/components/canvas/Stars';
-import Tech from '@/components/Tech';
 import Works from '@/components/Works';
 import { MixpanelProvider } from 'react-mixpanel-browser';
 import { usePageAnalytics } from '@/hooks/useAnalytics';
@@ -30,7 +29,6 @@ const Home = () => {
 			</main>
 			<About />
 			<Experience />
-			<Tech />
 			<Works />
 			<Feedbacks />
 			<div className='relative z-0'>
