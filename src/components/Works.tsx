@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+// import { Tilt } from 'react-tilt';
 import { SectionWrapper } from './hoc';
 import { fadeIn, textVariant } from '@/utils/motion';
 import { projects } from '@/constants';
@@ -106,12 +106,12 @@ const ProjectCard: FC<ProjectCardProps> = ({
 			<span className='hash-span' id={refId}>
 				&nbsp;
 			</span>
-			<Tilt
-				options={{
-					max: 45,
-					scale: 1,
-					speed: 450
-				}}
+			<div
+				// options={{
+				// 	max: 45,
+				// 	scale: 1,
+				// 	speed: 450
+				// }}
 				className='bg-tertiary h-full p-5 rounded-2xl sm:w-[16.25rem] w-full flex flex-col justify-between'>
 				<div className='flex flex-col'>
 					<div className='relative w-full h-[14.5rem]'>
@@ -178,7 +178,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 							</p>
 						))}
 				</div>
-			</Tilt>
+			</div>
 		</motion.div>
 	);
 };
