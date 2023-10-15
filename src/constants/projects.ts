@@ -106,6 +106,7 @@ const datingappServer = {
 		TAGS.Swagger
 	],
 	source_code_link: 'https://github.com/Vinayak1337/dating-app.server',
+	site_link: 'https://dating-app-server-gdjw.onrender.com/docs',
 	company: 'Possibillion Technologies',
 	image: DatingAppBackend
 };
@@ -115,7 +116,7 @@ const datingappAdmin = {
 	description:
 		'A comprehensive admin panel that empowers administrators to manage and monitor coffee shop owners, handle requests, and oversee the dating app users, ensuring smooth operations.',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
-	site_link: 'https://dating-app-admin.netlify.app/',
+	site_link: 'https://dating-app-admin-site.netlify.app',
 	source_code_link: 'https://github.com/Vinayak1337/dating-app.admin',
 	company: 'Possibillion Technologies',
 	image: DatingAppAdmin
