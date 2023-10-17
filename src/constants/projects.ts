@@ -127,7 +127,7 @@ const levtoursLadingPage = {
 	description:
 		'A vibrant tourism platform where users can reserve hotel rooms, read travel blogs, and explore curated tourist experiences.',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
-	site_link: 'https://levtours-website.netlify.app/',
+	site_link: 'https://levtours.netlify.app/',
 	source_code_link: 'https://github.com/Vinayak1337/levtours.website',
 	company: 'Possibillion Technologies',
 	image: LevToursLandingPage
