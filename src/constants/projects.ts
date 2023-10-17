@@ -88,7 +88,7 @@ const datingappLandingPage = {
 	refId: 'possibillion-projects',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.TypeScript],
 	site_link: 'https://dating-app-website.netlify.app/',
-	source_code_link: 'https://github.com/Vinayak1337/dating-app.website',
+	source_code_link: 'https://dating-app-landing.netlify.app',
 	company: 'Possibillion Technologies',
 	image: DatingAppLandingPage
 };
@@ -127,7 +127,7 @@ const levtoursLadingPage = {
 	description:
 		'A vibrant tourism platform where users can reserve hotel rooms, read travel blogs, and explore curated tourist experiences.',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.TypeScript],
-	site_link: 'https://levtours-website.netlify.app/',
+	site_link: 'https://levtours.netlify.app/',
 	source_code_link: 'https://github.com/Vinayak1337/levtours.website',
 	company: 'Possibillion Technologies',
 	image: LevToursLandingPage
@@ -138,7 +138,7 @@ const levtoursAdmin = {
 	description:
 		'A comprehensive dashboard for admins to oversee user activities, manage bookings, curate blogs, and introduce promotions via coupons or bulk data imports.',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
-	site_link: 'https://levtours-admin.netlify.app/',
+	site_link: 'https://levtours-admin-panel.netlify.app',
 	source_code_link: 'https://github.com/Vinayak1337/levtours.admin',
 	company: 'Possibillion Technologies',
 	image: LevToursAdmin
@@ -155,6 +155,7 @@ const levtoursServer = {
 		TAGS.Swagger,
 		TAGS.JavaScript
 	],
+	site_link: 'https://levtours-server.onrender.com/docs',
 	source_code_link: 'https://github.com/Vinayak1337/levtours.server',
 	company: 'Possibillion Technologies',
 	image: LevToursBackend
