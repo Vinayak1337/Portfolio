@@ -228,6 +228,40 @@ const tourneyTicketeer = {
 	image: TourneyTicketeer
 };
 
+const picmashFrontned = {
+	name: 'Picmash - Frontend',
+	description:
+		'A ReactJS frontend for a social media platform where users can upload images, follow other users, and engage with content via likes and comments.',
+	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
+	site_link: 'https://picmash.netlify.app/',
+	source_code_link: 'https://github.com/Vinayak1337/picmash.frontend'
+};
+
+const picmashBackend = {
+	name: 'Picmash - Backend',
+	description:
+		'A NodeJS backend that processes uploads, overlays captions using FFmpeg, and stores the final content in MongoDB and S3.',
+	tags: [
+		TAGS.NodeJS,
+		TAGS.ExpressJS,
+		TAGS.MongoDB,
+		TAGS.FFmpeg,
+		TAGS.S3,
+		TAGS.JavaScript
+	],
+	source_code_link: 'https://github.com/Vinayak1337/picmash.backend',
+	site_link: 'https://picmash-backend.onrender.com/docs'
+};
+
+const faceRecognitionFrontend = {
+	name: 'Face Recognition - Frontend',
+	description:
+		'A ReactJS frontend for a face recognition app that detects faces in images using Clarifai API.',
+	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
+	site_link: 'https://facerecognitionapp.netlify.app/',
+	source_code_link: 'https://github.com/Vinayak1337/face-recognition.frontend'
+};
+
 const projects: Project[] = [
 	wonderhood,
 	wonderlearn,
