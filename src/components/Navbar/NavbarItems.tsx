@@ -23,8 +23,8 @@ const NavbarItems: FC<NavbarItemsProps> = ({
 
 	return (
 		<ul className={ulClasses + ' transition-all duration-300'}>
-			{navLinks.map((link, i) => {
-				const isActive = active === link.title;
+			{navLinks.map(({ title, url }, i) => {
+				const isActive = active === title;
 				const textClass = isActive ? 'text-white' : 'text-secondary';
 				const fontClass = isMobile
 					? 'font-poppins font-medium text-base'
@@ -32,14 +32,14 @@ const NavbarItems: FC<NavbarItemsProps> = ({
 				const liClasses = `${textClass} ${fontClass} cursor-pointer`;
 
 				const handleClick = () => {
-					setActive(link.title);
+					setActive(title);
 					isMobile && setToggle(!toggle);
 				};
 
 				return (
-					<li key={i + link.id} className={liClasses} onClick={handleClick}>
-						<a onClick={handleCLick(link.title)} href={`#${link.id}`}>
-							{link.title}
+					<li key={i + title} className={liClasses} onClick={handleClick}>
+						<a onClick={handleCLick(title)} href={url}>
+							{title}
 						</a>
 					</li>
 				);
