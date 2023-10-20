@@ -9,6 +9,9 @@ import {
 	LevToursLandingPage,
 	MyLearning,
 	RelicsAudit,
+	RelicsBanHammer,
+	RelicsGeneralBot,
+	TourneyTicketeer,
 	wonderHood,
 	wonderLearn,
 	wonderLearnApp
@@ -198,11 +201,32 @@ const relicsAudit = {
 	image: RelicsAudit
 };
 
-const TourneyTicketeer = {};
+const relicsGeneral = {
+	name: 'Relics General',
+	description:
+		'A versatile Discord bot developed for the Relics Organisation using Node.js and JavaScript. It enhances community engagement with features like a modmail system for direct user- moderator communication, role management, cross-server announcements, and a suite of fun and utility commands.',
+	tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.MongoDB, TAGS.NodeJS],
+	source_code_link: 'https://github.com/Vinayak1337/relics-general-bot',
+	image: RelicsGeneralBot
+};
 
-const relicsGeneral = {};
+const relicsBanHammer = {
+	name: 'Relics Ban Hammer',
+	description:
+		'Relics Ban Hammer is a dedicated Discord bot developed for the Relics Organisation. Utilizing Node.js and JavaScript, its primary mission is to enforce consistent moderation by enabling chain bans or unbans across multiple servers.',
+	tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.MongoDB, TAGS.NodeJS],
+	source_code_link: 'https://github.com/Vinayak1337/RelicsBanHammer',
+	image: RelicsBanHammer
+};
 
-const valiant = {};
+const tourneyTicketeer = {
+	name: 'Tourney Ticketeer',
+	description:
+		'Tourney Ticketeer is a Discord bot developed for tournament organizers, streamlining the payment process for winners. Users initiate a ticket to specify their payment method, and upon completion, the bot manages notifications, role assignments, and logs all activities for transparency.',
+	tags: [TAGS.DiscordJS, TAGS.JavaScript, TAGS.NodeJS],
+	source_code_link: 'https://github.com/Vinayak1337/TourneyTicketeer/',
+	image: TourneyTicketeer
+};
 
 const projects: Project[] = [
 	wonderhood,
@@ -217,7 +241,10 @@ const projects: Project[] = [
 	levtoursServer,
 	fireworkFrontend,
 	fireworkBackend,
-	relicsAudit
+	relicsAudit,
+	relicsGeneral,
+	relicsBanHammer,
+	tourneyTicketeer
 ];
 
 export default projects;

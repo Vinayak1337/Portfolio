@@ -44,8 +44,14 @@ import LevToursBackend from './projects/Backend-LevTours.png';
 import FireworkFrontend from './projects/Frontend-Firework.png';
 import FireworkBackend from './projects/Backend-Firework.png';
 import RelicsAudit from './projects/RelicsAudit.png';
+import RelicsGeneralBot from './projects/RelicsGeneralBot.png';
+import RelicsBanHammer from './projects/RelicsBanHammer.png';
+import TourneyTicketeer from './projects/TourneyTicketeer.png';
 
 export {
+	TourneyTicketeer,
+	RelicsBanHammer,
+	RelicsGeneralBot,
 	wonderHood,
 	logo,
 	backend,
