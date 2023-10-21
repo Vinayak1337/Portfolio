@@ -51,8 +51,16 @@ import PicmashFrontend from './projects/PicmashFrontend.png';
 import PicmashBackend from './projects/PicmashBackend.png';
 import FaceRecognitionApp from './projects/FaceRecognitionApp.png';
 import FaceRecognitionServer from './projects/FaceRecognitionServer.png';
+import CrwnClothing from './projects/CrwnClothing.png';
+import RoboFriends from './projects/RoboFriends.png';
+import PDFSPlitter from './projects/PDFSPlitter.png';
+import CadillacsServer from './projects/CadillacsServer.png';
 
 export {
+	CadillacsServer,
+	PDFSPlitter,
+	RoboFriends,
+	CrwnClothing,
 	FaceRecognitionApp,
 	FaceRecognitionServer,
 	PicmashFrontend,

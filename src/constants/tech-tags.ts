@@ -106,6 +106,30 @@ const TAGS = {
 	Swagger: {
 		name: 'Swagger',
 		color: 'swagger-text-gradient'
+	},
+	Firebase: {
+		name: 'Firebase',
+		color: 'firebase-text-gradient'
+	},
+	Stripe: {
+		name: 'Stripe',
+		color: 'stripe-text-gradient'
+	},
+	Netlify: {
+		name: 'Netlify',
+		color: 'netlify-text-gradient'
+	},
+	ReduxSaga: {
+		name: 'Redux Saga',
+		color: 'redux-saga-text-gradient'
+	},
+	ReduxPersist: {
+		name: 'Redux Persist',
+		color: 'redux-persist-text-gradient'
+	},
+	JWT: {
+		name: 'JWT',
+		color: 'jwt-text-gradient'
 	}
 };
 

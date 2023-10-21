@@ -223,15 +223,23 @@ body {
 }
 
 .ffmpeg-text-gradient {
-    background: linear-gradient(to top, #2A2A2A, #4CAF50); /* Dark to FFmpeg green */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: linear-gradient(
+		to top,
+		#2a2a2a,
+		#4caf50
+	); /* Dark to FFmpeg green */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .s3-text-gradient {
-    background: linear-gradient(to top, #D83367, #FC575E); /* Dark red to light red */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: linear-gradient(
+		to top,
+		#d83367,
+		#fc575e
+	); /* Dark red to light red */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .javascript-text-gradient {
@@ -308,6 +316,66 @@ body {
 
 .swagger-text-gradient {
 	background: linear-gradient(to top, #6ca50f, #85c638);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.firebase-text-gradient {
+	background: linear-gradient(
+		to top,
+		#ffa611,
+		#ffca3e
+	); /* Firebase orange to light orange */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.stripe-text-gradient {
+	background: linear-gradient(
+		to top,
+		#556cd6,
+		#6772e5
+	); /* Stripe's primary blue to lighter blue */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.redux-saga-text-gradient {
+	background: linear-gradient(
+		to top,
+		#89d96d,
+		#9bde7e
+	); /* Redux-Saga's primary green to lighter green */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.netlify-text-gradient {
+	background: linear-gradient(
+		to top,
+		#00c7b7,
+		#00e4d0
+	); /* Netlify's primary teal to lighter teal */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.redux-persist-text-gradient {
+	background: linear-gradient(
+		to top,
+		#4a4a4a,
+		#7d7d7d
+	); /* A gradient from dark gray to light gray */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.jwt-text-gradient {
+	background: linear-gradient(
+		to top,
+		#007bff,
+		#33a1fd
+	); /* Dark blue to light blue */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
