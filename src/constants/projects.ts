@@ -1,4 +1,6 @@
 import {
+	CadillacsServer,
+	CrwnClothing,
 	DatingAppAdmin,
 	DatingAppBackend,
 	DatingAppLandingPage,
@@ -10,11 +12,13 @@ import {
 	LevToursBackend,
 	LevToursLandingPage,
 	MyLearning,
+	PDFSPlitter,
 	PicmashBackend,
 	PicmashFrontend,
 	RelicsAudit,
 	RelicsBanHammer,
 	RelicsGeneralBot,
+	RoboFriends,
 	TourneyTicketeer,
 	wonderHood,
 	wonderLearn,
@@ -32,7 +36,9 @@ const wonderhood = {
 		TAGS.SASS,
 		TAGS.Shopify,
 		TAGS.ReduxToolkit,
-		TAGS.JavaScript
+		TAGS.JavaScript,
+		TAGS.ReduxSaga,
+		TAGS.ReduxPersist
 	],
 	site_link: 'https://wonderhood.in/',
 	image: wonderHood,
@@ -66,7 +72,8 @@ const wonderlearnApp = {
 		TAGS.Expo,
 		TAGS.StyledComponents,
 		TAGS.ReduxToolkit,
-		TAGS.TypeScript
+		TAGS.TypeScript,
+		TAGS.ReduxSaga
 	],
 	company: 'wonderHood',
 	image: wonderLearnApp
@@ -81,7 +88,11 @@ const mylearning = {
 		TAGS.StyledComponents,
 		TAGS.ReduxToolkit,
 		TAGS.Ionic,
-		TAGS.TypeScript
+		TAGS.TypeScript,
+		TAGS.ReduxSaga,
+		TAGS.ReduxPersist,
+		TAGS.TailwindCSS,
+		TAGS.SASS
 	],
 	site_link: 'https://mylearning.thewonderlearn.com/',
 	company: 'wonderHood',
@@ -270,6 +281,64 @@ const faceRecognitionBackend = {
 	image: FaceRecognitionServer
 };
 
+const ecommerceApp = {
+	name: 'Crwn Clothing',
+	description:
+		'An e-commerce platform built with React, Redux, and Firebase. It features a comprehensive user authentication system including google, a shopping cart, and a payment gateway through stripe, ensuring a seamless shopping experience.',
+	tags: [
+		TAGS.ReactJS,
+		TAGS.Redux,
+		TAGS.Firebase,
+		TAGS.GraphQL,
+		TAGS.TypeScript,
+		TAGS.StyledComponents,
+		TAGS.Stripe,
+		TAGS.ReduxSaga,
+		TAGS.ReduxPersist
+	],
+	site_link: 'https://crwn-clothing-pwa.netlify.app/',
+	source_code_link:
+		'https://github.com/Vinayak1337/e-commerce-pwa/tree/master/client',
+	image: CrwnClothing
+};
+
+const RoboApp = {
+	name: 'Monster Rolodex',
+	description:
+		'A ReactJS app that showcases my early endeavors into React development. It features a search functionality that filters through a list of robots, allowing users to find their favorite robot.',
+	tags: [TAGS.ReactJS, TAGS.CSS, TAGS.TypeScript],
+	site_link: 'https://monsters-rolodex-webapp.netlify.app/',
+	source_code_link: 'https://github.com/Vinayak1337/robo-app',
+	image: RoboFriends
+};
+
+const PDFSplitter = {
+	name: 'PDF Splitter',
+	company: 'Freelance',
+	description:
+		'A freelance project offering an intuitive interface where users can upload a PDF and view its pages in a grid format. Users can handpick individual pages or specify a range, such as "1-3,5,6-9", to select multiple pages, providing users with a PDF of their selected pages.',
+	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+	site_link: 'https://pdf-splitter.vercel.app/',
+	image: PDFSPlitter
+};
+
+const cadillacsServer = {
+	name: 'Cadillacs - Backend',
+	description:
+		'A backend server managing RESTful APIs, designed to create and delete admin users with exclusive API access. It features two routes for video metadata storage: one private for admins and a community route, with JWT securing endpoints. Documentation is crafted using Swagger for clarity.',
+	tags: [
+		TAGS.NodeJS,
+		TAGS.ExpressJS,
+		TAGS.MongoDB,
+		TAGS.JavaScript,
+		TAGS.Swagger,
+		TAGS.JWT
+	],
+	company: 'Freelance',
+	site_link: 'https://cadillacs-server.onrender.com/docs/',
+	image: CadillacsServer
+};
+
 const projects: Project[] = [
 	wonderhood,
 	wonderlearn,
@@ -290,7 +359,11 @@ const projects: Project[] = [
 	faceRecognitionFrontend,
 	faceRecognitionBackend,
 	picmashFrontned,
-	picmashBackend
+	picmashBackend,
+	ecommerceApp,
+	PDFSplitter,
+	cadillacsServer,
+	RoboApp
 ];
 
 export default projects;
