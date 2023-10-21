@@ -2,12 +2,16 @@ import {
 	DatingAppAdmin,
 	DatingAppBackend,
 	DatingAppLandingPage,
+	FaceRecognitionApp,
+	FaceRecognitionServer,
 	FireworkBackend,
 	FireworkFrontend,
 	LevToursAdmin,
 	LevToursBackend,
 	LevToursLandingPage,
 	MyLearning,
+	PicmashBackend,
+	PicmashFrontend,
 	RelicsAudit,
 	RelicsBanHammer,
 	RelicsGeneralBot,
@@ -231,35 +235,39 @@ const tourneyTicketeer = {
 const picmashFrontned = {
 	name: 'Picmash - Frontend',
 	description:
-		'A ReactJS frontend for a social media platform where users can upload images, follow other users, and engage with content via likes and comments.',
-	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
-	site_link: 'https://picmash.netlify.app/',
-	source_code_link: 'https://github.com/Vinayak1337/picmash.frontend'
+		'Picmash is a budding social media application, developed as a rapid challenge during my college days. Built with React, JavaScript, and CSS, this frontend showcases my early endeavors into React development. It is like a prototype.',
+	tags: [TAGS.ReactJS, TAGS.CSS, TAGS.JavaScript],
+	site_link: 'https://picmash-app.netlify.app/',
+	source_code_link: 'https://github.com/Vinayak1337/picmash-app',
+	image: PicmashFrontend
 };
 
 const picmashBackend = {
 	name: 'Picmash - Backend',
 	description:
-		'A NodeJS backend that processes uploads, overlays captions using FFmpeg, and stores the final content in MongoDB and S3.',
-	tags: [
-		TAGS.NodeJS,
-		TAGS.ExpressJS,
-		TAGS.MongoDB,
-		TAGS.FFmpeg,
-		TAGS.S3,
-		TAGS.JavaScript
-	],
-	source_code_link: 'https://github.com/Vinayak1337/picmash.backend',
-	site_link: 'https://picmash-backend.onrender.com/docs'
+		'The backbone of the Picmash App, this server handles the core functionalities of the social media platform. Written in JavaScript & Node.js, it manages user authentication, post requests, and image storage, ensuring a seamless user experience on the frontend.',
+	tags: [TAGS.NodeJS, TAGS.ExpressJS, TAGS.MongoDB, TAGS.JavaScript],
+	source_code_link: 'https://github.com/Vinayak1337/picmash-server',
+	image: PicmashBackend
 };
 
 const faceRecognitionFrontend = {
 	name: 'Face Recognition - Frontend',
 	description:
-		'A ReactJS frontend for a face recognition app that detects faces in images using Clarifai API.',
+		'A personal project I developed after diving into React and TypeScript. This application showcases face detection capabilities, allowing users to upload images and instantly detect faces. It features a user dashboard for tracking uploads and offers customizable settings.',
 	tags: [TAGS.ReactJS, TAGS.SASS, TAGS.Redux, TAGS.JavaScript],
-	site_link: 'https://facerecognitionapp.netlify.app/',
-	source_code_link: 'https://github.com/Vinayak1337/face-recognition.frontend'
+	site_link: 'https://face-recognition-ht5h.netlify.app/',
+	source_code_link: 'https://github.com/Vinayak1337/face-recognition-app',
+	image: FaceRecognitionApp
+};
+
+const faceRecognitionBackend = {
+	name: 'Face Recognition - Backend',
+	description:
+		'A robust server built with Node.js and Express.js, designed to handle user authentication, image storage, and face detection. Integrated with MongoDB for data persistence and the Clarifai API for precise face detection.',
+	tags: [TAGS.NodeJS, TAGS.ExpressJS, TAGS.MongoDB, TAGS.JavaScript],
+	source_code_link: 'https://github.com/Vinayak1337/face-recognition-server/',
+	image: FaceRecognitionServer
 };
 
 const projects: Project[] = [
@@ -278,7 +286,11 @@ const projects: Project[] = [
 	relicsAudit,
 	relicsGeneral,
 	relicsBanHammer,
-	tourneyTicketeer
+	tourneyTicketeer,
+	faceRecognitionFrontend,
+	faceRecognitionBackend,
+	picmashFrontned,
+	picmashBackend
 ];
 
 export default projects;

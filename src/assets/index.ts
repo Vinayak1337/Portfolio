@@ -47,8 +47,16 @@ import RelicsAudit from './projects/RelicsAudit.png';
 import RelicsGeneralBot from './projects/RelicsGeneralBot.png';
 import RelicsBanHammer from './projects/RelicsBanHammer.png';
 import TourneyTicketeer from './projects/TourneyTicketeer.png';
+import PicmashFrontend from './projects/PicmashFrontend.png';
+import PicmashBackend from './projects/PicmashBackend.png';
+import FaceRecognitionApp from './projects/FaceRecognitionApp.png';
+import FaceRecognitionServer from './projects/FaceRecognitionServer.png';
 
 export {
+	FaceRecognitionApp,
+	FaceRecognitionServer,
+	PicmashFrontend,
+	PicmashBackend,
 	TourneyTicketeer,
 	RelicsBanHammer,
 	RelicsGeneralBot,
