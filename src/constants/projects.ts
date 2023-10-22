@@ -12,7 +12,7 @@ import {
 	LevToursBackend,
 	LevToursLandingPage,
 	MyLearning,
-	PDFSPlitter,
+	PDFSplitter,
 	PicmashBackend,
 	PicmashFrontend,
 	RelicsAudit,
@@ -319,7 +319,7 @@ const PDFSplitter = {
 		'A freelance project offering an intuitive interface where users can upload a PDF and view its pages in a grid format. Users can handpick individual pages or specify a range, such as "1-3,5,6-9", to select multiple pages, providing users with a PDF of their selected pages.',
 	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
 	site_link: 'https://pdf-splitter.vercel.app/',
-	image: PDFSPlitter
+	image: PDFSplitter
 };
 
 const cadillacsServer = {
