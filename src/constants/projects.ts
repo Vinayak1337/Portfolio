@@ -312,7 +312,7 @@ const RoboApp = {
 	image: RoboFriends
 };
 
-const PDFSplitter = {
+const pdfSplitter = {
 	name: 'PDF Splitter',
 	company: 'Freelance',
 	description:
@@ -361,7 +361,7 @@ const projects: Project[] = [
 	picmashFrontned,
 	picmashBackend,
 	ecommerceApp,
-	PDFSplitter,
+	pdfSplitter,
 	cadillacsServer,
 	RoboApp
 ];
