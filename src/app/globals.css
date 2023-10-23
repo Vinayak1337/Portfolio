@@ -380,6 +380,16 @@ body {
 	-webkit-text-fill-color: transparent;
 }
 
+.webpack-text-gradient {
+	background: linear-gradient(
+		to top,
+		#1c78c0,
+		#8ed6fb
+	); /* Dark blue to light blue */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 /* canvas- styles */
 .canvas-loader {
 	font-size: 10px;
