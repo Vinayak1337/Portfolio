@@ -130,6 +130,10 @@ const TAGS = {
 	JWT: {
 		name: 'JWT',
 		color: 'jwt-text-gradient'
+	},
+	Webpack: {
+		name: 'Webpack',
+		color: 'webpack-text-gradient'
 	}
 };
 

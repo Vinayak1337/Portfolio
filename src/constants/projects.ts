@@ -317,8 +317,18 @@ const pdfSplitter = {
 	company: 'Freelance',
 	description:
 		'A freelance project offering an intuitive interface where users can upload a PDF and view its pages in a grid format. Users can handpick individual pages or specify a range, such as "1-3,5,6-9", to select multiple pages, providing users with a PDF of their selected pages.',
-	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript],
+	tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript, TAGS.TailwindCSS],
 	site_link: 'https://pdf-splitter.vercel.app/',
+	image: PDFSplitter
+};
+
+const pdfy = {
+	name: 'Pdfy',
+	company: 'Freelance',
+	description:
+		'Pdfy is a Next.js project built with TypeScript and TailwindCSS. Users can upload a PDF, view its pages, and edit its metadata on a split-screen interface. The platform allows for metadata extraction to a .csv file or the download of the modified PDF.',
+	tags: [TAGS.TypeScript, TAGS.NextJS, TAGS.TailwindCSS],
+	site_link: 'https://pdfy.vercel.app/',
 	image: PDFSplitter
 };
 
@@ -337,6 +347,39 @@ const cadillacsServer = {
 	company: 'Freelance',
 	site_link: 'https://cadillacs-server.onrender.com/docs/',
 	image: CadillacsServer
+};
+
+const samplePrj = {
+	name: 'Sample Project',
+	description:
+		'A project I was asked to replicate an UI design from an image as a task for an interview which is also responsive.',
+	tags: [TAGS.HTML, TAGS.JavaScript, TAGS.CSS],
+	site_link: 'https://vinayak1337.github.io/sm-sample-prj/',
+	source_code_link: 'https://github.com/Vinayak1337/sm-sample-prj'
+};
+
+const starWars = {
+	name: 'Star Wars',
+	description:
+		'A ReactJS project that showcases my early endeavors into React-Native development.',
+	tags: [
+		TAGS.ReactNative,
+		TAGS.StyledComponents,
+		TAGS.TypeScript,
+		TAGS.Expo,
+		TAGS.ReduxToolkit,
+		TAGS.ReduxSaga
+	],
+	source_code_link: 'https://github.com/Vinayak1337/star-wars-dashboard'
+};
+
+const ProjectManager = {
+	name: 'Project Manager',
+	description:
+		'A simple project manager app, I built it while learning TypeScript, its UI is fully rendered by TypeScript written in OOP style. It features a drag and drop functionality for moving tasks between columns. used webpack to bundle the code in a single file.',
+	tags: [TAGS.TypeScript, TAGS.HTML, TAGS.CSS, TAGS.Webpack],
+	site_link: 'https://vinayak1337.github.io/project-manager/',
+	source_code_link: 'https://github.com/Vinayak1337/project-manager'
 };
 
 const projects: Project[] = [
@@ -361,9 +404,13 @@ const projects: Project[] = [
 	picmashFrontned,
 	picmashBackend,
 	ecommerceApp,
+	pdfy,
 	pdfSplitter,
 	cadillacsServer,
-	RoboApp
+	ProjectManager,
+	RoboApp,
+	starWars,
+	samplePrj
 ];
 
 export default projects;
