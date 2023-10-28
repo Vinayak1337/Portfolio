@@ -409,8 +409,6 @@ const projects: Project[] = [
 	cadillacsServer,
 	ProjectManager,
 	RoboApp,
-	starWars,
-	samplePrj
 ];
 
 export default projects;
