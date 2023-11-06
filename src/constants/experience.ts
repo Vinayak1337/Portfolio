@@ -1,6 +1,6 @@
 const wonderHood = {
 	title: 'Software Developer - 1',
-	company_name: 'wonderHood - from Intern to Full-Time',
+	company_name: 'wonderHood - Full-Time',
 	icon: 'https://media.licdn.com/dms/image/C4D0BAQE7GTwnLUxD_g/company-logo_200_200/0/1641382010936?e=1700092800&v=beta&t=v8MM0puWfmdXl0TIOYfKD-Ojy0iNzMZE1qzrpYqoP3M',
 	iconBg: '#018093',
 	date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - August 2023 (Full-Time)',
@@ -21,7 +21,7 @@ const wonderHood = {
 
 const possibillion = {
 	title: 'MERN-Stack Developer',
-	company_name: 'Possibillion Technologies - intern',
+	company_name: 'Possibillion Technologies - Intern (Full-Time)',
 	icon: 'https://media.licdn.com/dms/image/C4D0BAQHc_BeBxL0h-A/company-logo_200_200/0/1519878923252?e=1700092800&v=beta&t=asB-ROZbGqLyT3brKEWe5iTfjh3qaaoeDVzW6wvjVHU',
 	iconBg: '#383E56',
 	date: 'Sept 2021 - Nov 2021',
