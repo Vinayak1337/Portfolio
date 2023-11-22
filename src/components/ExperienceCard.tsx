@@ -3,7 +3,7 @@ import useAnalytics from '@/hooks/useAnalytics';
 import hexToFilter from '@/utils/HexToFilter';
 import { FC } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import Img from 'next/image';
+import Img, { StaticImageData } from 'next/image';
 
 const ExperienceCard: FC<ExperienceCardProps> = ({
 	title,
@@ -44,7 +44,6 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 						src={icon}
 						alt={company_name}
 						className='w-3/5 h-3/5 object-contain rounded-full'
-						blurDataURL={icon}
 						placeholder='blur'
 						width={40}
 						height={40}
@@ -93,7 +92,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 interface ExperienceCardProps {
 	title: string;
 	company_name: string;
-	icon: string;
+	icon: StaticImageData;
 	iconBg: string;
 	date: string;
 	points: string[];
