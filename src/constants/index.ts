@@ -32,10 +32,6 @@ export const navLinks = [
 	{
 		url: '#contact',
 		title: 'Contact'
-	},
-	{
-		url: 'https://drive.google.com/file/d/1s3AOZAkClk58IPk8F1czEFWBsj-J1uaW/view?usp=sharing',
-		title: 'Resume'
 	}
 ];
 
