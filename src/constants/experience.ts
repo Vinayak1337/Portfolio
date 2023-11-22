@@ -1,7 +1,10 @@
-const wonderHood = {
+import { possibillion, wonderhood } from '@/assets';
+import { StaticImageData } from 'next/image';
+
+const wonderHoodEmployment = {
 	title: 'Software Developer - 1',
 	company_name: 'wonderHood - Full-Time',
-	icon: 'https://media.licdn.com/dms/image/C4D0BAQE7GTwnLUxD_g/company-logo_200_200/0/1641382010936?e=1700092800&v=beta&t=v8MM0puWfmdXl0TIOYfKD-Ojy0iNzMZE1qzrpYqoP3M',
+	icon: wonderhood,
 	iconBg: '#018093',
 	date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - August 2023 (Full-Time)',
 	points: [
@@ -19,10 +22,10 @@ const wonderHood = {
 	projectReference: '#wonderhood-projects'
 };
 
-const possibillion = {
+const possibillionEmployment = {
 	title: 'MERN-Stack Developer',
 	company_name: 'Possibillion Technologies - Intern (Full-Time)',
-	icon: 'https://media.licdn.com/dms/image/C4D0BAQHc_BeBxL0h-A/company-logo_200_200/0/1519878923252?e=1700092800&v=beta&t=asB-ROZbGqLyT3brKEWe5iTfjh3qaaoeDVzW6wvjVHU',
+	icon: possibillion,
 	iconBg: '#383E56',
 	date: 'Sept 2021 - Nov 2021',
 	points: [
@@ -37,11 +40,11 @@ const possibillion = {
 const experiences: {
 	title: string;
 	company_name: string;
-	icon: string;
+	icon: StaticImageData;
 	iconBg: string;
 	date: string;
 	points: string[];
 	projectReference: string;
-}[] = [wonderHood, possibillion];
+}[] = [wonderHoodEmployment, possibillionEmployment];
 
 export default experiences;
