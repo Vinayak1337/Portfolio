@@ -25,6 +25,8 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 
 	return (
 		<VerticalTimelineElement
+			id={company_name}
+			key={`xp-${title}`}
 			visible
 			contentStyle={{
 				background: '#1d1836',
