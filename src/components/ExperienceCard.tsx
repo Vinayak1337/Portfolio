@@ -25,6 +25,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 
 	return (
 		<VerticalTimelineElement
+			visible
 			contentStyle={{
 				background: '#1d1836',
 				color: '#fff'
@@ -71,8 +72,11 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 					))}
 				</ul>
 
-				<a onClick={handleClick} className='flex' href={projectReference}>
-					Projects{' '}
+				<a
+					onClick={handleClick}
+					className='flex items-center w-fit gap-1'
+					href={projectReference}>
+					<p className='!mt-0 w-fit h-fit animated-underline'>Projects</p>
 					<Img
 						className='-rotate-90 object-contain'
 						width={24}

@@ -9,6 +9,7 @@ import StarsCanvas from '@/components/canvas/Stars';
 import Works from '@/components/Works';
 import { MixpanelProvider } from 'react-mixpanel-browser';
 import { usePageAnalytics } from '@/hooks/useAnalytics';
+import Footer from '@/components/Footer/Footer';
 
 export default function Page() {
 	return (
@@ -35,6 +36,7 @@ const Home = () => {
 				<Contact />
 				<StarsCanvas />
 			</div>
+			<Footer />
 		</>
 	);
 };

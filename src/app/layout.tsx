@@ -1,6 +1,7 @@
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
 	title: 'Vinayak | React & Frontend Developer',
@@ -20,6 +21,7 @@ export default function RootLayout({
 			<body className='relative bg-primary'>
 				{children}
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

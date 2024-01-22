@@ -46,6 +46,12 @@
 	a {
 		@apply text-purple-300 hover:text-[#dfd9ff] transition-all duration-300;
 	}
+
+	.animated-underline {
+		@apply relative;
+		@apply before:content-[""] before:bg-purple-700 before:absolute before:right-0 before:-bottom-0.5 before:h-0.5 before:w-[0%] before:rounded-t before:transition-all before:duration-300 before:ease-in;
+		@apply hover:before:w-full hover:before:bg-white hover:before:left-0 hover:before:right-auto;
+	}
 }
 
 body {

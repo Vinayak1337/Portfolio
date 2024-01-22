@@ -35,6 +35,11 @@ import RoboFriends from './projects/RoboFriends.png';
 import PDFSplitter from './projects/PDFSplitter.png';
 import CadillacsServer from './projects/CadillacsServer.png';
 
+import Github from './tech/github.svg';
+import Linkedin from './tech/linkedin.svg';
+import Email from './tech/email.svg';
+import Comment from './tech/comment.svg';
+
 export {
 	CadillacsServer,
 	PDFSplitter,
@@ -69,5 +74,9 @@ export {
 	FireworkFrontend,
 	FireworkBackend,
 	RelicsAudit,
-	MyLearning
+	MyLearning,
+	Github,
+	Linkedin,
+	Email,
+	Comment
 };

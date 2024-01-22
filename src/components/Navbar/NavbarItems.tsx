@@ -38,7 +38,7 @@ const NavbarItems: FC<NavbarItemsProps> = ({
 
 				return (
 					<li key={i + title} className={liClasses} onClick={handleClick}>
-						<a onClick={handleCLick(title)} href={url}>
+						<a className='animated-underline' onClick={handleCLick(title)} href={url}>
 							{title}
 						</a>
 					</li>
