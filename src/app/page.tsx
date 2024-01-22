@@ -24,7 +24,7 @@ const Home = () => {
 	return (
 		<>
 			<Navbar />
-			<main className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+			<main className='bg-hero-pattern bg-repeat-x bg-cover animate-bg-slide'>
 				<Hero />
 			</main>
 			<About />
