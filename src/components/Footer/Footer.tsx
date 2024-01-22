@@ -2,10 +2,11 @@ import { Comment, Email, Github, Linkedin } from '@/assets';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import React, { FC, PropsWithChildren } from 'react';
+import { SectionWrapper } from '../hoc';
 
 const Footer = () => (
 	<footer className='w-full'>
-		<nav className='container mx-auto p-10 md:px-20 flex justify-around items-stretch flex-wrap gap-5'>
+		<nav className='container mx-auto flex justify-around items-stretch flex-wrap gap-5'>
 			{FooterLinks.map(({ href, image, text }) => (
 				<FooterLink key={href + '-footer-link'} href={href} image={image}>
 					{text}
@@ -15,7 +16,7 @@ const Footer = () => (
 	</footer>
 );
 
-export default Footer;
+export default SectionWrapper(Footer, 'contact');
 
 const FooterLink: FC<
 	PropsWithChildren & { href: string; image: string | StaticImageData }

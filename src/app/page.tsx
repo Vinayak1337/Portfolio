@@ -2,7 +2,6 @@
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
-import Feedbacks from '@/components/Feedbacks';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
 import StarsCanvas from '@/components/canvas/Stars';
@@ -31,12 +30,11 @@ const Home = () => {
 			<About />
 			<Experience />
 			<Works />
-			<Feedbacks />
 			<div className='relative z-0'>
+				<Footer />
 				<Contact />
 				<StarsCanvas />
 			</div>
-			<Footer />
 		</>
 	);
 };
