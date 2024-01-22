@@ -8,9 +8,9 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+# or
+bun dev
 ```
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
 
 ## Learn More
 

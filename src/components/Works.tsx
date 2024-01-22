@@ -29,10 +29,17 @@ const Works = () => (
 				authentication. I have a track record of delivering high-quality
 				solutions by following industry best practices, and I&apos;m always
 				eager to learn and explore new technologies. Please explore my{' '}
-				<a href='https://github.com/Vinayak1337'>GitHub</a> and{' '}
-				<a href='https://www.linkedin.com/in/vinayak1337/'>LinkedIn</a> profiles
-				to view some of the projects I&apos;ve worked on, and feel free to reach
-				out if you&apos;re interested in collaborating.
+				<a className='animated-underline' href='https://github.com/Vinayak1337'>
+					GitHub
+				</a>{' '}
+				and{' '}
+				<a
+					className='animated-underline'
+					href='https://www.linkedin.com/in/vinayak1337/'>
+					LinkedIn
+				</a>{' '}
+				profiles to view some of the projects I&apos;ve worked on, and feel free
+				to reach out if you&apos;re interested in collaborating.
 			</motion.p>
 		</div>
 

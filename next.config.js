@@ -1,19 +1,17 @@
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true'
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	swcMinify: true,
 	images: {
-		domains: [
-			'images.unsplash.com',
-			'randomuser.me',
-			'media.licdn.com',
-			'api.apiflash.com',
-			'github.com',
-			'github-production-user-asset-6210df.s3.amazonaws.com'
+		remotePatterns: [
+			{
+				hostname: 'api.apiflash.com'
+			}
 		]
-	},
-	experimental: {
-		appDir: true
-	},
-	swcMinify: true
+	}
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

@@ -39,8 +39,7 @@ const Hero = () => {
 							<HackedText ref={hackedTextRef} text='Vinayak' />
 						</span>
 					</h1>
-					<p
-						className={`heroSubText transition-all duration-300 mt-2 text-white-100 w-full max-w-md md:max-w-xl lg:max-w-2xl`}>
+					<p className='heroSubText transition-all duration-300 mt-2 text-white-100 w-full max-w-md md:max-w-xl lg:max-w-2xl'>
 						Experienced React & Frontend Developer, skilled in MERN stack and
 						TypeScript. Proficient in building responsive web applications and
 						passionate about exploring new technologies. Committed to delivering

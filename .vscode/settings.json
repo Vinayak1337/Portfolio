@@ -1,9 +1,9 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
     "apiflash",
     "carrent",
+    "clsx",
     "Crwn",
     "datingapp",
     "expressjs",
@@ -13,6 +13,7 @@
     "licdn",
     "MERN",
     "networkidle",
+    "nextjs",
     "Picmash",
     "Possibillion",
     "randomuser",

@@ -1,7 +1,7 @@
 'use client';
 import { PointMaterial, Points, Preload } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
-import * as random from 'maath/random/dist/maath-random.cjs';
+import { inSphere } from 'maath/random/dist/maath-random.cjs';
 import { Suspense, useMemo, useRef } from 'react';
 import type { Points as PointsType } from 'three';
 import Loader from '../Loader';
@@ -43,7 +43,7 @@ const Stars = () => {
 
 	const sphere = useMemo(
 		() =>
-			random.inSphere(new Float32Array(6000), {
+			inSphere(new Float32Array(6000), {
 				radius: 1.2
 			}) as Float32Array,
 		[]
