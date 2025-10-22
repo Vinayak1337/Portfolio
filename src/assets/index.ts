@@ -9,6 +9,7 @@ import openInNew from './open-in-new.png';
 
 import possibillion from './company/possibillion.jpeg';
 import wonderhood from './company/wonderhood.jpeg';
+import remotehire from './company/remotehire.png';
 
 import wonderHood from './projects/wonderHood.png';
 import wonderLearn from './projects/wonderLearn.png';
@@ -53,6 +54,7 @@ export {
 	RelicsBanHammer,
 	RelicsGeneralBot,
 	wonderHood,
+	remotehire,
 	logo,
 	backend,
 	mobile,

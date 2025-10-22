@@ -243,7 +243,7 @@ const tourneyTicketeer = {
 	image: TourneyTicketeer
 };
 
-const picmashFrontned = {
+const picmashFrontend = {
 	name: 'Picmash - Frontend',
 	description:
 		'Picmash is a budding social media application, developed as a rapid challenge during my college days. Built with React, JavaScript, and CSS, this frontend showcases my early endeavors into React development. It is like a prototype.',
@@ -401,7 +401,7 @@ const projects: Project[] = [
 	tourneyTicketeer,
 	faceRecognitionFrontend,
 	faceRecognitionBackend,
-	picmashFrontned,
+	picmashFrontend,
 	picmashBackend,
 	ecommerceApp,
 	pdfy,
@@ -410,5 +410,47 @@ const projects: Project[] = [
 	ProjectManager,
 	RoboApp,
 ];
+
+export const projectMetaLookup: Record<string, any> = {
+	// wonderHood (Employment)
+	'wonderHood': { category: 'employment', companyKey: 'wonderhood', featured: true, priority: 2 },
+	'wonderLearn': { category: 'employment', companyKey: 'wonderhood', featured: true, priority: 1, size: 'large' },
+	'wonderLearn App': { category: 'employment', companyKey: 'wonderhood' },
+	'MyLearning': { category: 'employment', companyKey: 'wonderhood' },
+
+	// Possibillion (Internship)
+	'Dating App - Landing Page': { category: 'internship', companyKey: 'possibillion' },
+	'Dating App - Admin Panel': { category: 'internship', companyKey: 'possibillion' },
+	'Dating App - Backend': { category: 'internship', companyKey: 'possibillion' },
+	'LevTours - Landing Page': { category: 'internship', companyKey: 'possibillion' },
+	'LevTours - Admin Panel': { category: 'internship', companyKey: 'possibillion' },
+	'LevTours - Backend': { category: 'internship', companyKey: 'possibillion' },
+	'Firework - Frontend': { category: 'internship', companyKey: 'possibillion' },
+	'Firework - Backend': { category: 'internship', companyKey: 'possibillion' },
+
+	// Open Source
+	'Relics Audit': { category: 'open-source', companyKey: 'misc' },
+	'Relics General': { category: 'open-source', companyKey: 'misc' },
+	'Relics Ban Hammer': { category: 'open-source', companyKey: 'misc' },
+	'Tourney Ticketeer': { category: 'open-source', companyKey: 'misc' },
+
+	// Personal
+	'Face Recognition - Frontend': { category: 'personal', companyKey: 'personal', featured: false },
+	'Face Recognition - Backend': { category: 'personal', companyKey: 'personal' },
+	'Picmash - Frontend': { category: 'personal', companyKey: 'personal' },
+	'Picmash - Backend': { category: 'personal', companyKey: 'personal' },
+	'Crwn Clothing': { category: 'personal', companyKey: 'personal' },
+	'Star Wars': { category: 'mini', companyKey: 'personal' },
+	'Project Manager': { category: 'mini', companyKey: 'personal' },
+	'Monster Rolodex': { category: 'mini', companyKey: 'personal' },
+
+	// Freelance
+	'Pdfy': { category: 'freelance', companyKey: 'freelance', featured: true, priority: 3 },
+	'PDF Splitter': { category: 'freelance', companyKey: 'freelance' },
+	'Cadillacs - Backend': { category: 'freelance', companyKey: 'freelance' },
+
+	// Misc small
+	'Sample Project': { category: 'mini', companyKey: 'misc' },
+};
 
 export default projects;

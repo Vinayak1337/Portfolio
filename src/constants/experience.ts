@@ -1,12 +1,22 @@
-import { possibillion, wonderhood } from '@/assets';
+import { possibillion, remotehire, wonderhood } from '@/assets';
 import { StaticImageData } from 'next/image';
+
+const remoteHireEmployment = {
+	title: 'Senior Fullstack Engineer',
+	company_name: 'RemoteHire - Full-Time',
+	icon: remotehire,
+	iconBg: '#F0DB4F',
+	date: 'Feb 2024 - Aug 2024 (Full-Time)\nAug 2024 - Dec 2024(Part-Time)',
+	projectReference: '#remotehire-projects',
+	points: []
+};
 
 const wonderHoodEmployment = {
 	title: 'Software Developer - 1',
 	company_name: 'wonderHood - Full-Time',
 	icon: wonderhood,
 	iconBg: '#018093',
-	date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - August 2023 (Full-Time)',
+	date: 'Nov 2021 - Jan 2022 (Intern)\nJan 2022 - August 2023 (Full-Time)\nSept 2023 - Feb 2024 (Intern)',
 	points: [
 		'As an intern, I revamped an existing React website, addressing bugs and enhancing its alignment with design specs.',
 		'Boosted user engagement through performance optimizations, notably lazy loading.',
@@ -45,6 +55,6 @@ const experiences: {
 	date: string;
 	points: string[];
 	projectReference: string;
-}[] = [wonderHoodEmployment, possibillionEmployment];
+}[] = [remoteHireEmployment, wonderHoodEmployment, possibillionEmployment];
 
 export default experiences;
