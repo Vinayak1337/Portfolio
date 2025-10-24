@@ -69,7 +69,7 @@ export default function BaseProjectCard({ project, className = '', imageClassNam
       </div>
       {tags?.length ? (
         <div className="mt-3 flex flex-wrap gap-2">
-          {tags.map((t, i) => (
+          {tags.map((t: { name: string; color: string }, i: number) => (
             <span key={`${project.name}-tag-${i}`} className={`text-sm ${t.color}`}>#{t.name}</span>
           ))}
         </div>

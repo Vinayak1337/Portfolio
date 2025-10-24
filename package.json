@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -28,7 +28,7 @@
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.4",
     "react-vertical-timeline-component": "^3.6.0",
-    "sharp": "^0.33.2",
+    "sharp": "^0.33.5",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.160.1"
   },
