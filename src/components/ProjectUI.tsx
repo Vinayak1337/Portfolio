@@ -13,7 +13,7 @@ const ProjectUI: FC<ProjectUIProps> = ({
 	company,
 	handleClick
 }) => (
-	<div className='bg-tertiary h-full p-5 rounded-2xl sm:w-[16.25rem] w-full flex flex-col justify-between relative group'>
+	<div className='bg-tertiary h-full p-5 -mt-7 rounded-2xl sm:w-[16.25rem] w-full flex flex-col justify-between relative group'>
 		<div className='flex flex-col'>
 			<div className='relative w-full h-[14.5rem]'>
 				<Img
