@@ -4,6 +4,7 @@ import hexToFilter from '@/utils/HexToFilter';
 import { FC } from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import Img, { StaticImageData } from 'next/image';
+import ExperiencePoint from './ExperiencePoint';
 
 const ExperienceCard: FC<ExperienceCardProps> = ({
 	title,
@@ -66,11 +67,13 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
 				</div>
 				<ul className='list-disc ml-5 space-y-2'>
 					{points.map((point, index) => (
-						<li
+						<ExperiencePoint
 							key={`xp-point-${index}-${title}`}
-							className='text-white-100 text-sm pl-1 tracking-wider'>
-							{point}
-						</li>
+							point={point}
+							experienceTitle={title}
+							companyName={company_name}
+							pointIndex={index}
+						/>
 					))}
 				</ul>
 

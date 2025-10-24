@@ -134,6 +134,26 @@ const TAGS = {
 	Webpack: {
 		name: 'Webpack',
 		color: 'webpack-text-gradient'
+	},
+	LangChain: {
+		name: 'LangChain',
+		color: 'langchain-text-gradient'
+	},
+	Flowise: {
+		name: 'Flowise',
+		color: 'flowise-text-gradient'
+	},
+	Prisma: {
+		name: 'Prisma',
+		color: 'prisma-text-gradient'
+	},
+	PostHog: {
+		name: 'PostHog',
+		color: 'posthog-text-gradient'
+	},
+	Clerk: {
+		name: 'Clerk',
+		color: 'clerk-text-gradient'
 	}
 };
 

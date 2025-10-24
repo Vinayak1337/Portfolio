@@ -22,9 +22,47 @@ import {
 	TourneyTicketeer,
 	wonderHood,
 	wonderLearn,
-	wonderLearnApp
+	wonderLearnApp,
+	Immibot,
+	BPIT
 } from '@/assets';
 import TAGS from './tech-tags';
+
+const BPITproject = {
+	name: 'BPIT Website',
+	description:
+		'Redesigned BPIT’s official site with a modern architecture and inline “click-to-edit” CMS for live content updates. Integrated analytics and SEO enhancements for improved maintainability and scalability.',
+	tags: [
+		TAGS.NextJS,
+		TAGS.TypeScript,
+		TAGS.TailwindCSS,
+		TAGS.MongoDB,
+		TAGS.PostHog
+	],
+	site_link: 'https://redesign.bpitindia.com',
+	image: BPIT,
+	company: 'BPIT Tech Team'
+}
+
+const immibot = {
+	name: 'Immibot',
+	description:
+		'An AI-powered immigration assistant that helps users discover visa programs, validate documents, and compute eligibility scores through adaptive questioning.',
+	site_link: 'https://nextjsapp-immibot.vercel.app',
+	tags: [
+		TAGS.NextJS,
+		TAGS.TypeScript,
+		TAGS.TailwindCSS,
+		TAGS.LangChain,
+		TAGS.Flowise,
+		TAGS.Prisma,
+		TAGS.PostHog,
+		TAGS.Clerk,
+		TAGS.Stripe
+	],
+	company: 'RemoteHire',
+	image: Immibot
+};
 
 const wonderhood = {
 	name: 'wonderHood',
@@ -383,6 +421,8 @@ const ProjectManager = {
 };
 
 const projects: Project[] = [
+	BPITproject,
+	immibot,
 	wonderhood,
 	wonderlearn,
 	wonderlearnApp,
@@ -408,22 +448,56 @@ const projects: Project[] = [
 	pdfSplitter,
 	cadillacsServer,
 	ProjectManager,
-	RoboApp,
+	RoboApp
 ];
 
 export const projectMetaLookup: Record<string, any> = {
+	// RemoteHire (Employment)
+	Immibot: {
+		category: 'employment',
+		companyKey: 'remotehire',
+		featured: true,
+		priority: 3
+	},
+
 	// wonderHood (Employment)
-	'wonderHood': { category: 'employment', companyKey: 'wonderhood', featured: true, priority: 2 },
-	'wonderLearn': { category: 'employment', companyKey: 'wonderhood', featured: true, priority: 1, size: 'large' },
+	wonderHood: {
+		category: 'employment',
+		companyKey: 'wonderhood',
+		featured: true,
+		priority: 2
+	},
+	wonderLearn: {
+		category: 'employment',
+		companyKey: 'wonderhood',
+		featured: true,
+		priority: 1,
+		size: 'large'
+	},
 	'wonderLearn App': { category: 'employment', companyKey: 'wonderhood' },
-	'MyLearning': { category: 'employment', companyKey: 'wonderhood' },
+	MyLearning: { category: 'employment', companyKey: 'wonderhood' },
 
 	// Possibillion (Internship)
-	'Dating App - Landing Page': { category: 'internship', companyKey: 'possibillion' },
-	'Dating App - Admin Panel': { category: 'internship', companyKey: 'possibillion' },
-	'Dating App - Backend': { category: 'internship', companyKey: 'possibillion' },
-	'LevTours - Landing Page': { category: 'internship', companyKey: 'possibillion' },
-	'LevTours - Admin Panel': { category: 'internship', companyKey: 'possibillion' },
+	'Dating App - Landing Page': {
+		category: 'internship',
+		companyKey: 'possibillion'
+	},
+	'Dating App - Admin Panel': {
+		category: 'internship',
+		companyKey: 'possibillion'
+	},
+	'Dating App - Backend': {
+		category: 'internship',
+		companyKey: 'possibillion'
+	},
+	'LevTours - Landing Page': {
+		category: 'internship',
+		companyKey: 'possibillion'
+	},
+	'LevTours - Admin Panel': {
+		category: 'internship',
+		companyKey: 'possibillion'
+	},
 	'LevTours - Backend': { category: 'internship', companyKey: 'possibillion' },
 	'Firework - Frontend': { category: 'internship', companyKey: 'possibillion' },
 	'Firework - Backend': { category: 'internship', companyKey: 'possibillion' },
@@ -435,8 +509,15 @@ export const projectMetaLookup: Record<string, any> = {
 	'Tourney Ticketeer': { category: 'open-source', companyKey: 'misc' },
 
 	// Personal
-	'Face Recognition - Frontend': { category: 'personal', companyKey: 'personal', featured: false },
-	'Face Recognition - Backend': { category: 'personal', companyKey: 'personal' },
+	'Face Recognition - Frontend': {
+		category: 'personal',
+		companyKey: 'personal',
+		featured: false
+	},
+	'Face Recognition - Backend': {
+		category: 'personal',
+		companyKey: 'personal'
+	},
 	'Picmash - Frontend': { category: 'personal', companyKey: 'personal' },
 	'Picmash - Backend': { category: 'personal', companyKey: 'personal' },
 	'Crwn Clothing': { category: 'personal', companyKey: 'personal' },
@@ -445,12 +526,17 @@ export const projectMetaLookup: Record<string, any> = {
 	'Monster Rolodex': { category: 'mini', companyKey: 'personal' },
 
 	// Freelance
-	'Pdfy': { category: 'freelance', companyKey: 'freelance', featured: true, priority: 3 },
+	Pdfy: {
+		category: 'freelance',
+		companyKey: 'freelance',
+		featured: true,
+		priority: 3
+	},
 	'PDF Splitter': { category: 'freelance', companyKey: 'freelance' },
 	'Cadillacs - Backend': { category: 'freelance', companyKey: 'freelance' },
 
 	// Misc small
-	'Sample Project': { category: 'mini', companyKey: 'misc' },
+	'Sample Project': { category: 'mini', companyKey: 'misc' }
 };
 
 export default projects;

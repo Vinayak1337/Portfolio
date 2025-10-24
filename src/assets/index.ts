@@ -10,6 +10,7 @@ import openInNew from './open-in-new.png';
 import possibillion from './company/possibillion.jpeg';
 import wonderhood from './company/wonderhood.jpeg';
 import remotehire from './company/remotehire.png';
+import bpitTechTeam from './company/bpit.jpg';
 
 import wonderHood from './projects/wonderHood.png';
 import wonderLearn from './projects/wonderLearn.png';
@@ -35,6 +36,8 @@ import CrwnClothing from './projects/CrwnClothing.png';
 import RoboFriends from './projects/RoboFriends.png';
 import PDFSplitter from './projects/PDFSplitter.png';
 import CadillacsServer from './projects/CadillacsServer.png';
+import Immibot from './projects/Immibot.png';
+import BPIT from './projects/BPIT.png';
 
 import Github from './tech/github.svg';
 import Linkedin from './tech/linkedin.svg';
@@ -42,6 +45,8 @@ import Email from './tech/email.svg';
 import Comment from './tech/comment.svg';
 
 export {
+	BPIT,
+	Immibot,
 	CadillacsServer,
 	PDFSplitter,
 	RoboFriends,
@@ -80,5 +85,6 @@ export {
 	Github,
 	Linkedin,
 	Email,
-	Comment
+	Comment,
+	bpitTechTeam
 };

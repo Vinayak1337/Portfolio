@@ -47,11 +47,16 @@
 		@apply text-purple-300 hover:text-[#dfd9ff] transition-all duration-300;
 	}
 
-	.animated-underline {
-		@apply relative;
-		@apply before:content-[""] before:bg-purple-700 before:absolute before:right-0 before:-bottom-0.5 before:h-0.5 before:w-[0%] before:rounded-t before:transition-all before:duration-300 before:ease-in;
-		@apply hover:before:w-full hover:before:bg-white hover:before:left-0 hover:before:right-auto;
-	}
+		.animated-underline {
+			@apply relative;
+			@apply before:content-[""] before:bg-purple-700 before:absolute before:right-0 before:-bottom-0.5 before:h-0.5 before:w-[0%] before:rounded-t before:transition-all before:duration-300 before:ease-in;
+			@apply hover:before:w-full hover:before:bg-white hover:before:left-0 hover:before:right-auto;
+		}
+
+		/* Darker theme-colored links for experience points */
+		.xp-link {
+			@apply text-quaternary hover:text-quaternary before:bg-quaternary hover:before:bg-quaternary;
+		}
 }
 
 body {
@@ -392,6 +397,57 @@ body {
 		#1c78c0,
 		#8ed6fb
 	); /* Dark blue to light blue */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* New tech gradients */
+.langchain-text-gradient {
+	background: linear-gradient(
+		to top,
+		#00bfa6,
+		#00e5c1
+	); /* Teal to mint */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.flowise-text-gradient {
+	background: linear-gradient(
+		to top,
+		#7c3aed,
+		#ec4899
+	); /* Indigo to pink */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.prisma-text-gradient {
+	background: linear-gradient(
+		to top,
+		#2dd4bf,
+		#60a5fa
+	); /* Teal to blue */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.posthog-text-gradient {
+	background: linear-gradient(
+		to top,
+		#ff4d8d,
+		#7c3aed
+	); /* Pink to purple */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.clerk-text-gradient {
+	background: linear-gradient(
+		to top,
+		#f97316,
+		#f59e0b
+	); /* Orange to amber */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

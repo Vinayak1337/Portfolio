@@ -2,6 +2,7 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
     "apiflash",
+    "bpit",
     "carrent",
     "clsx",
     "Crwn",
@@ -9,6 +10,7 @@
     "expressjs",
     "frameloop",
     "GLTF",
+    "Immibot",
     "jobit",
     "licdn",
     "MERN",

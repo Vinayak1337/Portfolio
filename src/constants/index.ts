@@ -20,6 +20,10 @@ export const navLinks = [
 	{
 		url: '#contact',
 		title: 'Contact'
+	},
+	{
+		url: '/Vinayak_Kumar_Resume.pdf',
+		title: 'Resume'
 	}
 ];
 

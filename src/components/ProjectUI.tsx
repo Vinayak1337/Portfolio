@@ -13,7 +13,7 @@ const ProjectUI: FC<ProjectUIProps> = ({
 	company,
 	handleClick
 }) => (
-	<div className='bg-tertiary h-full p-5 rounded-2xl sm:w-[16.25rem] w-full flex flex-col justify-between'>
+	<div className='bg-tertiary h-full p-5 rounded-2xl sm:w-[16.25rem] w-full flex flex-col justify-between relative group'>
 		<div className='flex flex-col'>
 			<div className='relative w-full h-[14.5rem]'>
 				<Img
@@ -33,7 +33,7 @@ const ProjectUI: FC<ProjectUIProps> = ({
 							onClick={handleClick(true)}
 							href={source_code_link}
 							target='_blank'
-							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+							className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-gradient-to-b from-black-200/95 to-black-100/85 backdrop-blur-md ring-1 ring-white/40 shadow-lg shadow-black/50'>
 							<Img
 								loading='lazy'
 								src={github}
@@ -47,7 +47,7 @@ const ProjectUI: FC<ProjectUIProps> = ({
 							onClick={handleClick()}
 							href={site_link}
 							target='_blank'
-							className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
+							className='w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-gradient-to-b from-black-200/95 to-black-100/85 backdrop-blur-md ring-1 ring-white/40 shadow-lg shadow-black/50'>
 							<Img
 								loading='lazy'
 								style={{
@@ -62,22 +62,34 @@ const ProjectUI: FC<ProjectUIProps> = ({
 				</div>
 			</div>
 
-			<div className='mt-5'>
+			<div className='mt-2'>
 				<h3 className='text-white font-bold text-2xl'>{name}</h3>
 				{company && <p className='text-xs text-purple-300'>{company}</p>}
-				<p className='mt-2 text-secondary text-sm'>{description}</p>
+				<div className='relative mt-2 overflow-hidden'>
+					<p className='text-secondary text-sm'>{description}</p>
+				</div>
 			</div>
-		</div>
-
-		<div className='flex flex-wrap gap-2'>
-			{tags?.length &&
-				tags.map(({ name, color }, index) => (
-					<p
-						key={`tag-${index}-${name}`}
-						className={`text-sm text-bold ${color}`}>
-						#{name}
-					</p>
-				))}
+			{tags?.length ? (
+				<div
+						className='
+							absolute left-2.5 right-2.5 bottom-3 z-10
+							opacity-0 translate-y-3 max-h-0 overflow-hidden transform-gpu will-change-transform
+							transition-[max-height,transform,opacity] duration-500 ease-in
+							group-hover:opacity-100 group-hover:translate-y-0 group-hover:max-h-[200px]
+							rounded-md px-3 py-2 shadow-lg shadow-black/30
+							bg-gradient-to-b from-black-100/70 to-black-100/30
+							backdrop-blur-md ring-1 ring-quaternary/25
+							flex flex-wrap justify-center gap-2 pointer-events-none
+						'>
+					{tags.map(({ name, color }, index) => (
+						<p
+							key={`tag-${index}-${name}`}
+							className={`text-sm text-bold ${color}`}>
+							#{name}
+						</p>
+					))}
+				</div>
+			) : null}
 		</div>
 	</div>
 );
