@@ -20,6 +20,27 @@ export default function useAnalytics() {
 					mixpanel.identify(phone);
 					mixpanel.people.set(data);
 				}
+			},
+			trackServer: async (eventName: string, data = {}) => {
+				if (mixpanel?.config.token) {
+					try {
+						const distinctId =
+							mixpanel.get_distinct_id && mixpanel.get_distinct_id();
+						await fetch('/api/track', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify({
+								event: eventName,
+								properties: {
+									...data,
+									distinct_id: distinctId
+								}
+							})
+						});
+					} catch (e) {
+						console.error('Server tracking failed', e);
+					}
+				}
 			}
 		}),
 		[mixpanel]
@@ -28,9 +49,10 @@ export default function useAnalytics() {
 
 export const usePageAnalytics = () => {
 	const pathname = usePathname();
-	const { track } = useAnalytics();
+	const { track, trackServer } = useAnalytics();
 
 	useEffect(() => {
 		track(pathname);
-	}, [pathname, track]);
+		trackServer('Page View Server', { path: pathname });
+	}, [pathname, track, trackServer]);
 };

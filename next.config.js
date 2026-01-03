@@ -11,6 +11,12 @@ const nextConfig = {
 				hostname: 'api.apiflash.com'
 			}
 		]
+	},
+	webpack: (config, { isServer }) => {
+		if (isServer) {
+			config.externals.push('geoip-lite');
+		}
+		return config;
 	}
 };
 
