@@ -7,6 +7,15 @@ import { SectionWrapper } from './hoc';
 import { textVariant } from '@/utils/motion';
 import ExperienceCard from './ExperienceCard';
 import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
+
+const VerticalTimeline = dynamic(
+	() =>
+		import('react-vertical-timeline-component').then(
+			mod => mod.VerticalTimeline
+		),
+	{ ssr: false }
+);
 
 const Experience = () => (
 	<>
@@ -16,19 +25,15 @@ const Experience = () => (
 		</motion.div>
 		<div className='mt-20 flex flex-col'>
 			<Suspense>
-				{import('react-vertical-timeline-component').then(
-					({ VerticalTimeline }) => (
-						<VerticalTimeline>
-							{experiences.map((experience, index) => (
-								<ExperienceCard
-									key={index + experience.title + 'xp card'}
-									index={index}
-									{...experience}
-								/>
-							))}
-						</VerticalTimeline>
-					)
-				)}
+				<VerticalTimeline>
+					{experiences.map((experience, index) => (
+						<ExperienceCard
+							key={index + experience.title + 'xp card'}
+							index={index}
+							{...experience}
+						/>
+					))}
+				</VerticalTimeline>
 			</Suspense>
 		</div>
 	</>

@@ -20,7 +20,19 @@ export async function POST(req: NextRequest) {
 			headers: Object.fromEntries(req.headers.entries())
 		} as any);
 
-		const ip = detectedIp === '::1' ? '127.0.0.1' : detectedIp || '127.0.0.1';
+		let ip = detectedIp === '::1' ? '127.0.0.1' : detectedIp || '127.0.0.1';
+
+		// If localhost, fetch the actual public IP of the server (dev machine)
+		if (ip === '127.0.0.1' || ip === '::ffff:127.0.0.1') {
+			try {
+				const response = await fetch('https://api.ipify.org?format=json');
+				const data = await response.json();
+				ip = data.ip;
+			} catch (e) {
+				console.log('Failed to fetch public IP, using fallback');
+				ip = '208.67.222.222'; // Fallback to OpenDNS if fetch fails
+			}
+		}
 
 		// Lookup Geo information
 		const geo = geoip.lookup(ip);
@@ -39,6 +51,13 @@ export async function POST(req: NextRequest) {
 			// Store raw geo data as well if needed
 			geo_data: geo
 		};
+
+		console.log('Tracking Event:', eventName, {
+			ip,
+			city: geo?.city,
+			lat: geo?.ll?.[0],
+			long: geo?.ll?.[1]
+		});
 
 		// Send to Mixpanel
 		mixpanel.track(eventName, eventData);
