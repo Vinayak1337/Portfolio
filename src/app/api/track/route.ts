@@ -1,21 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Mixpanel from 'mixpanel';
 import requestIp from 'request-ip';
-import geoip from 'geoip-lite';
 
 // Initialize Mixpanel with the token
-const mixpanel = Mixpanel.init(
-	process.env.NEXT_PUBLIC_MIXPANEL_TOKEN || 'MISSING_TOKEN'
-);
+const token = process.env.MIXPANEL_TOKEN || process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
+const mixpanel = Mixpanel.init(token || 'MISSING_TOKEN');
 
 export async function POST(req: NextRequest) {
+	if (!token) {
+		console.error('MIXPANEL_TOKEN is missing');
+		return NextResponse.json(
+			{ success: false, error: 'Configuration Error' },
+			{ status: 500 }
+		);
+	}
+
 	try {
 		const body = await req.json();
 		const eventName = 'geo-Visit';
 		const properties = body.properties || {};
 
 		// Get IP address
-		// NextRequest headers are standard Web API Headers, request-ip expects Node-like req or headers object
 		const detectedIp = requestIp.getClientIp({
 			headers: Object.fromEntries(req.headers.entries())
 		} as any);
@@ -34,8 +39,39 @@ export async function POST(req: NextRequest) {
 			}
 		}
 
-		// Lookup Geo information
-		const geo = geoip.lookup(ip);
+		// Priority 1: Check Vercel headers (Most reliable in production)
+		const vercelGeo = {
+			city: req.headers.get('x-vercel-ip-city'),
+			country: req.headers.get('x-vercel-ip-country'),
+			region: req.headers.get('x-vercel-ip-country-region'),
+			latitude: req.headers.get('x-vercel-ip-latitude'),
+			longitude: req.headers.get('x-vercel-ip-longitude')
+		};
+
+		let geo: any = null;
+
+		if (vercelGeo.country) {
+			geo = {
+				city: vercelGeo.city ? decodeURIComponent(vercelGeo.city) : undefined,
+				country: vercelGeo.country,
+				region: vercelGeo.region,
+				ll: [
+					vercelGeo.latitude ? Number(vercelGeo.latitude) : 0,
+					vercelGeo.longitude ? Number(vercelGeo.longitude) : 0
+				]
+			};
+		}
+
+		// Priority 2: Fallback to geoip-lite (Localhost or if headers missing)
+		if (!geo) {
+			try {
+				// Lazy load geoip-lite to prevent startup crashes on Vercel if data files are missing
+				const geoip = require('geoip-lite');
+				geo = geoip.lookup(ip);
+			} catch (e) {
+				console.warn('GeoIP lookup failed (fallback disabled)', e);
+			}
+		}
 
 		// Prepare event data
 		const eventData = {

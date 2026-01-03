@@ -1,5 +1,5 @@
 import { useMixpanel } from 'react-mixpanel-browser';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import va from '@vercel/analytics';
 import { usePathname } from 'next/navigation';
 
