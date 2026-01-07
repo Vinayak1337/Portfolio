@@ -39,7 +39,7 @@ const BPITproject = {
 		TAGS.MongoDB,
 		TAGS.PostHog
 	],
-	site_link: 'https://redesign.bpitindia.com',
+	site_link: 'https://bpit-site-redesign.vercel.app/',
 	image: BPIT,
 	company: 'BPIT Tech Team'
 }

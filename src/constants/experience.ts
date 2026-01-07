@@ -7,9 +7,9 @@ const bpitTechTeachEmployment = {
 	icon: bpitTechTeam,
 	iconBg: '#FFFFFF',
 	date: 'June 2025 - Present',
-	projectReference: 'https://redesign.bpitindia.com',
+	projectReference: 'https://bpit-site-redesign.vercel.app/',
 	points: [
-		"Led a team of 3 to redesign BPIT’s official website from [a legacy](https://bpitindia.ac.in) PHP/static structure into [a modern](https://redesign.bpitindia.com), Next.js (App Router) + TypeScript + TailwindCSS stack focused on performance, maintainability, and modern UX.",
+		"Led a team of 3 to redesign BPIT’s official website from [a legacy](https://bpitindia.ac.in) PHP/static structure into [a modern](https://bpit-site-redesign.vercel.app/), Next.js (App Router) + TypeScript + TailwindCSS stack focused on performance, maintainability, and modern UX.",
 		'Built an inline “click-to-edit” CMS experience, enabling administrators to update text, links, and images directly on rendered sections, with changes persisted via MongoDB — removing the need for a separate admin panel.',
 		'Developed reusable schemas and modular components following DRY principles, ensuring consistent design language and easy scalability across all departments and pages.',
 		'Integrated PostHog analytics across pages, links, and CTAs to capture engagement data, navigation patterns, and user flow insights.',
