@@ -4,11 +4,11 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-This is a Next.js 14 portfolio website with TypeScript, featuring 3D elements with Three.js, animations with Framer Motion, and styled with TailwindCSS. The site is deployed on Vercel with analytics integration.
+This is a Next.js 16 portfolio website with TypeScript, featuring 3D elements with Three.js, animations with Framer Motion, and styled with TailwindCSS. The site is deployed on Vercel with analytics integration.
 
 ## Key Technologies
 
-- **Framework**: Next.js 14.1.0 with App Router
+- **Framework**: Next.js 16 with App Router
 - **Language**: TypeScript
 - **Styling**: TailwindCSS with custom theme colors and animations
 - **3D Graphics**: Three.js with React Three Fiber
@@ -19,6 +19,9 @@ This is a Next.js 14 portfolio website with TypeScript, featuring 3D elements wi
 ## Development Commands
 
 ```bash
+# Install dependencies
+npm install
+
 # Start development server
 npm run dev
 
@@ -41,7 +44,6 @@ ANALYZE=true npm run build
 - `/src/app/` - Next.js App Router pages and layouts
   - `page.tsx` - Main homepage with all sections
   - `layout.tsx` - Root layout with metadata and analytics
-  - `/api/` - API routes for screenshot generation
 - `/src/components/` - React components
   - Main sections: Hero, About, Experience, Works, Contact
   - `/canvas/` - Three.js 3D components
@@ -61,24 +63,21 @@ ANALYZE=true npm run build
 ### Environment Variables
 Required environment variables (set in `.env`):
 - `NEXT_PUBLIC_MIXPANEL_TOKEN` - For analytics tracking
-- `NEXT_PUBLIC_API_FLASH` - For project screenshot generation
 - `NEXT_PUBLIC_EMAILJS_*` - EmailJS configuration for contact form
 
 ### Build Configuration
 
 - **Bundle Analyzer**: Enabled via `@next/bundle-analyzer` when `ANALYZE=true`
-- **Image Optimization**: Remote patterns configured for `api.apiflash.com`
-- **SWC Minification**: Enabled for faster builds
+- **Linting**: Uses ESLint 9 flat config via `eslint.config.mjs`
 - **TypeScript**: Strict mode enabled with path alias `@/*` → `./src/*`
 
 ### Styling System
 
-- Custom TailwindCSS theme with portfolio-specific colors:
+- TailwindCSS v4 with project-specific theme tokens:
   - `primary`: #050816
   - `secondary`: #aaa6c3
   - `tertiary`: #151030
   - `quaternary`: #915EFF
-- Custom animations: `bg-slide`, `accordion-down/up`
 - Extended breakpoint: `xs: 450px`
 
 ### Performance Considerations

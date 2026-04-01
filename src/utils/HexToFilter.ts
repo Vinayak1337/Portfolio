@@ -121,9 +121,9 @@ class Color {
 		const b = this.b / 255;
 		const max = Math.max(r, g, b);
 		const min = Math.min(r, g, b);
-		let h: number,
-			s: number,
-			l = (max + min) / 2;
+		let h = 0;
+		let s = 0;
+		const l = (max + min) / 2;
 
 		if (max === min) {
 			h = s = 0;
@@ -143,11 +143,11 @@ class Color {
 					h = (r - g) / d + 4;
 					break;
 			}
-			h! /= 6;
+			h /= 6;
 		}
 
 		return {
-			h: h! * 100,
+			h: h * 100,
 			s: s * 100,
 			l: l * 100
 		};
@@ -161,6 +161,11 @@ class Color {
 		}
 		return value;
 	}
+}
+
+interface SolveResult {
+	values: number[];
+	loss: number;
 }
 
 class Solver {
@@ -178,7 +183,7 @@ class Solver {
 		return {
 			values: result.values,
 			loss: result.loss,
-			filter: this.css(result.values!),
+			filter: this.css(result.values),
 			lossMsg: this.setLossMsg(result.loss)
 		};
 	}
@@ -197,7 +202,7 @@ class Solver {
 		const c = 15;
 		const a = [60, 180, 18000, 600, 1.2, 1.2];
 
-		let best = { loss: Infinity };
+		let best: SolveResult = { values: [], loss: Infinity };
 		for (let i = 0; best.loss > 25 && i < 3; i++) {
 			const initial = [50, 20, 3750, 50, 100, 100];
 			const result = this.spsa(A, a, c, initial, 1000);
@@ -208,7 +213,7 @@ class Solver {
 		return best;
 	}
 
-	solveNarrow(wide: { loss: number; values?: any }) {
+	solveNarrow(wide: SolveResult) {
 		const A = wide.loss;
 		const c = 2;
 		const A1 = A + 1;
@@ -220,7 +225,7 @@ class Solver {
 		const alpha = 1;
 		const gamma = 0.16666666666666666;
 
-		let best = null;
+		let best: number[] = [];
 		let bestLoss = Infinity;
 		const deltas = new Array(6);
 		const highArgs = new Array(6);

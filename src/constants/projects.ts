@@ -387,30 +387,6 @@ const cadillacsServer = {
 	image: CadillacsServer
 };
 
-const samplePrj = {
-	name: 'Sample Project',
-	description:
-		'A project I was asked to replicate an UI design from an image as a task for an interview which is also responsive.',
-	tags: [TAGS.HTML, TAGS.JavaScript, TAGS.CSS],
-	site_link: 'https://vinayak1337.github.io/sm-sample-prj/',
-	source_code_link: 'https://github.com/Vinayak1337/sm-sample-prj'
-};
-
-const starWars = {
-	name: 'Star Wars',
-	description:
-		'A ReactJS project that showcases my early endeavors into React-Native development.',
-	tags: [
-		TAGS.ReactNative,
-		TAGS.StyledComponents,
-		TAGS.TypeScript,
-		TAGS.Expo,
-		TAGS.ReduxToolkit,
-		TAGS.ReduxSaga
-	],
-	source_code_link: 'https://github.com/Vinayak1337/star-wars-dashboard'
-};
-
 const ProjectManager = {
 	name: 'Project Manager',
 	description:
@@ -451,7 +427,21 @@ const projects: Project[] = [
 	RoboApp
 ];
 
-export const projectMetaLookup: Record<string, any> = {
+interface ProjectMeta {
+	category:
+		| 'employment'
+		| 'internship'
+		| 'freelance'
+		| 'personal'
+		| 'open-source'
+		| 'mini';
+	companyKey: string;
+	featured?: boolean;
+	priority?: number;
+	size?: 'large';
+}
+
+export const projectMetaLookup: Record<string, ProjectMeta> = {
 	// RemoteHire (Employment)
 	Immibot: {
 		category: 'employment',
